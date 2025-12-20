@@ -1,5 +1,7 @@
-/* 顏色 */
+
+
 :root{
+    /* 顏色 */
     --primary-blue-100:#E5EBFF;
     --primary-blue-200:#BFC9F0;
     --primary-blue-300:#A6B6F1;
@@ -22,6 +24,10 @@
     --neutral-600:#757575;
     --neutral-700:#363636;
 
+/* 字體：英文中文使用字體不同 */
+    --font-main: 'Josefin Sans', 'Noto Sans TC', sans-serif;
+
+/* 字級 */
     --fs-h1: 48px;
     --fs-h2: 36px;
     --fs-h3: 32px;
@@ -42,25 +48,3 @@
         --fs-body3: 16px;
     }
 }
-
-h1{
-    font-size:var(--fs-h1);
-    line-height:150%;
-    letter-spacing:0.02em;
-}
-h2{
-    font-size:var(--fs-h2);
-    line-height:150%;
-    letter-spacing:0.02em;
-}
-h3{
-    font-size:var(--fs-h3);
-    line-height:150%;
-    letter-spacing:0.02em;
-}
-h4{
-    font-size:var(--fs-h4);
-    line-height:150%;
-    letter-spacing:0.02em;
-}
-
