@@ -23,6 +23,11 @@
     --neutral-500:#9A9A9A;
     --neutral-600:#757575;
     --neutral-700:#363636;
+/* 圓角 */
+    --radius-ex-lg: 40px;  
+    --radius-lg: 24px;  
+    --radius-md: 16px; 
+    --radius-sm: 12px;
 
 /* 字體：英文中文使用字體不同 */
     --font-main: 'Josefin Sans', 'Noto Sans TC', sans-serif;
