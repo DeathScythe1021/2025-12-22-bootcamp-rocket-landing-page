@@ -1,4 +1,10 @@
 @charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 /* 顏色 */
 /* 圓角 */
 /* 字體：英文中文使用字體不同 */
