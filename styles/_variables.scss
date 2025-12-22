@@ -39,12 +39,10 @@ $fs-body1: 24px;
 $fs-body2: 20px;
 $fs-body3: 16px;
 
-@media (max-width: 428px) {
-  $fs-h1: 32px;
-  $fs-h2: 28px;
-  $fs-h3: 24px;
-  $fs-h4: 20px;
-  $fs-body1: 20px;
-  $fs-body2: 18px;
-  $fs-body3: 16px;
-}
+$fs-m-h1: 32px;
+$fs-m-h2: 28px;
+$fs-m-h3: 24px;
+$fs-m-h4: 20px;
+$fs-m-body1: 20px;
+$fs-m-body2: 18px;
+$fs-m-body3: 16px;
