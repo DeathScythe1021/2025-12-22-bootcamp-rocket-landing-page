@@ -13,3 +13,7 @@ yarn-debug.log*
 # build
 dist/
 build/
+
+# main.css
+styles/main.css
+styles/main.css.map
