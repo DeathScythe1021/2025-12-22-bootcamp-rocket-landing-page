@@ -10,10 +10,13 @@
     background-color: #E5EBFF;
     max-width: 1076px;
     height: 96px;
-    // 以下功能都一樣，怕寫太簡化大家看不懂，則一使用
+    // 以下3種功能都一樣，怕寫太簡化大家看不懂，則一使用
+    //1.
     // border: 2px solid $neutral-700;
     // border-radius: $radius-md;
+    //2.
     // @include box-outline($radius-size: md, $border-width: 2px, $border-color: $neutral-700);
+    //3.
     @include box-outline(md, 2px, $neutral-700);
 }
 
