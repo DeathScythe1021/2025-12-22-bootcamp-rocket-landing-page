@@ -1,0 +1,55 @@
+.coach-info-card {
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 251px; //寬度似乎是自動分配，到時等放到index 再調整
+    height: 160px;
+    position: relative;
+    @include box-outline(md, 2px, $neutral-700);
+
+    //以下RWD
+    @include mobile {
+        width: 100%;
+        max-width: 332px;
+        height: 200px;
+    }
+
+    &:active {
+        background-color: $primary-blue-100 ;
+    }
+}
+
+.coach-info-pic img {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+
+    //以下RWD
+    @include mobile {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+.coach-info-btn {
+    width: 48px;
+    height: auto;
+    background-color: #FFFFFF;
+    position: absolute;
+    z-index: 5;
+    top: -24px;
+    right: 20px;
+    @include flex-center(0);
+    @include box-outline(md, 2px, $neutral-700);
+    writing-mode: vertical-rl; //文字變直
+    box-shadow: 4px 4px 0 $neutral-700;
+    padding: 16px;
+    @include cursor-pointer;
+
+    &:hover {
+        transition: transform 0.3s ease;
+        transform: translateY(-10px);
+    }
+}
