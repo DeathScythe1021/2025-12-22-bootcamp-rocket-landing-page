@@ -1,0 +1,101 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 顏色 */
+/* 圓角 */
+/* 字體：英文中文使用字體不同 */
+/* 字級 */
+h1 {
+  font-size: var(48px);
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  font-family: var("Josefin Sans", "Noto Sans TC", sans-serif);
+}
+@media (max-width: 428px) {
+  h1 {
+    font-size: var(32px);
+  }
+}
+
+h2 {
+  font-size: var(36px);
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  font-family: var("Josefin Sans", "Noto Sans TC", sans-serif);
+}
+@media (max-width: 428px) {
+  h2 {
+    font-size: var(28px);
+  }
+}
+
+h3 {
+  font-size: var(32px);
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  font-family: var("Josefin Sans", "Noto Sans TC", sans-serif);
+}
+@media (max-width: 428px) {
+  h3 {
+    font-size: var(24px);
+  }
+}
+
+h4 {
+  font-size: var(28px);
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  font-family: var("Josefin Sans", "Noto Sans TC", sans-serif);
+}
+@media (max-width: 428px) {
+  h4 {
+    font-size: var(20px);
+  }
+}
+
+.body-1 {
+  font-size: var(24px);
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  font-family: var("Josefin Sans", "Noto Sans TC", sans-serif);
+}
+@media (max-width: 428px) {
+  .body-1 {
+    font-size: var(20px);
+  }
+}
+
+.body-2 {
+  font-size: var(20px);
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  font-family: var("Josefin Sans", "Noto Sans TC", sans-serif);
+}
+@media (max-width: 428px) {
+  .body-2 {
+    font-size: var(18px);
+  }
+}
+
+.body-3 {
+  font-size: var(16px);
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-family: var("Josefin Sans", "Noto Sans TC", sans-serif);
+}
+@media (max-width: 428px) {
+  .body-3 {
+    font-size: var(16px);
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,77 @@
+h1 {
+  font-size: var($fs-h1);
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  font-family: var($font-main);
+
+  @media (max-width: 428px) {
+    font-size: var($fs-m-h1);
+  }
+}
+
+h2 {
+  font-size: var($fs-h2);
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  font-family: var($font-main);
+   @media (max-width: 428px) {
+    font-size: var($fs-m-h2);
+  }
+}
+
+h3 {
+  font-size: var($fs-h3);
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  font-family: var($font-main);
+   @media (max-width: 428px) {
+    font-size: var($fs-m-h3);
+  }
+}
+
+h4 {
+  font-size: var($fs-h4);
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  font-family: var($font-main);
+   @media (max-width: 428px) {
+    font-size: var($fs-m-h4);
+  }
+}
+
+.body-1 {
+  font-size: var($fs-body1);
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  font-family: var($font-main);
+   @media (max-width: 428px) {
+    font-size: var($fs-m-body1);
+  }
+}
+
+.body-2 {
+  font-size: var($fs-body2);
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  font-family: var($font-main);
+   @media (max-width: 428px) {
+    font-size: var($fs-m-body2);
+  }
+}
+
+.body-3 {
+  font-size: var($fs-body3);
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-family: var($font-main);
+   @media (max-width: 428px) {
+    font-size: var($fs-m-body3);
+  }
+}
