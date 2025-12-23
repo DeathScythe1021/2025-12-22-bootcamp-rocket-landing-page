@@ -129,4 +129,63 @@ h4 {
     width: 332px;
     height: 80px;
   }
+}
+
+.coach-info-card {
+  background-color: #FFFFFF;
+  width: 100%;
+  max-width: 251px;
+  height: 160px;
+  position: relative;
+  border: 2px solid #363636;
+  border-radius: 16px;
+}
+@media (max-width: 428px) {
+  .coach-info-card {
+    width: 100%;
+    max-width: 332px;
+    height: 200px;
+  }
+}
+.coach-info-card:active {
+  background-color: #E5EBFF;
+}
+
+.coach-info-pic img {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+@media (max-width: 428px) {
+  .coach-info-pic img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+.coach-info-btn {
+  width: 48px;
+  height: auto;
+  background-color: #FFFFFF;
+  position: absolute;
+  z-index: 5;
+  top: -24px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  border: 2px solid #363636;
+  border-radius: 16px;
+  writing-mode: vertical-rl;
+  box-shadow: 4px 4px 0 #363636;
+  padding: 16px;
+  cursor: pointer;
+}
+.coach-info-btn:hover {
+  transition: transform 0.3s ease;
+  transform: translateY(-10px);
 }/*# sourceMappingURL=main.css.map */
