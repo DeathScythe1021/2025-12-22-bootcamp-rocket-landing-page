@@ -1,0 +1,48 @@
+.header{
+    width: 100%;
+    height: 64px;
+    position: fixed;
+}
+
+.infinite-marquee{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.infinite-marquee .marquee-track-fast{
+    gap: $spacing-xl;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    will-change: transform;
+    animation: track-fast 30s linear infinite;
+}
+
+.marquee-text{
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    gap: $spacing-l;
+    white-space: nowrap;
+    font-weight: 700;
+    width: fit-content
+}
+
+.marquee-text > div{
+  flex: 0 0 auto;
+}
+
+@keyframes track-fast {
+	from {
+		transform: translateX(20%);
+	}
+	to {
+		transform: translateX(-80%);
+	}
+}
+
+

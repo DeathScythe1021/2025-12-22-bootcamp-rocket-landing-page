@@ -1,0 +1,41 @@
+.register-now-btn-box:hover {
+    .register-now-btn-icon {
+        display: block;
+    }
+}
+
+.register-now-btn-box {
+    @include flex-center($spacing-l);
+    @include margin-auto;
+    background-color: #E5EBFF;
+    max-width: 1076px;
+    height: 96px;
+    // 以下3種功能都一樣，怕寫太簡化大家看不懂，則一使用
+    //1.
+    // border: 2px solid $neutral-700;
+    // border-radius: $radius-md;
+    //2.
+    // @include box-outline($radius-size: md, $border-width: 2px, $border-color: $neutral-700);
+    //3.
+    @include box-outline(md, 2px, $neutral-700);
+}
+
+.register-now-btn-icon {
+    display: none;
+    @include cursor-pointer; //默認是可按 只改一行 也直接可用 cursor: pointer
+}
+
+//==============================RWD==============================
+// @media (max-width: 428px) {
+//     .register-now-btn-box {
+//         height: 80px;
+//         width: 332px;
+//     }
+// }
+//上下分別為CSS & SCSS 寫法 根據主頁風格選擇使用
+.register-now-btn-box {
+    @include mobile {
+        width: 332px;
+        height: 80px;
+    }
+}

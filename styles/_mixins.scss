@@ -1,0 +1,126 @@
+// Flexbox 排版
+@mixin flex-center($spacing) {
+    //row
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:$spacing;
+}
+
+@mixin flex-center-col {
+    //col
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// 絕對定位置中
+@mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// 按鈕重置
+@mixin button-reset {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+// 媒體查詢
+@mixin mobile {
+    @media (max-width: 428px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+// 圓角系統
+@mixin box-outline($radius-size: md, $border-width: 2px, $border-color: $neutral) {
+    // 1. 邊框邏輯
+    border: $border-width solid $border-color;
+
+    // 2. 圓角邏輯 (直接從 Map 取得數值)
+    border-radius: map-get((sm: $radius-sm,
+                md: $radius-md,
+                lg: $radius-lg,
+                ex-lg :$radius-ex-lg ), $radius-size);
+}
+
+// hover 動畫 (還需對照figma修改)
+@mixin hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+}
+
+// 自動 margin（置中用）
+// 相當於 margin:0 auto;
+@mixin margin-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Grid 常用佈局
+@mixin grid-center {
+    display: grid;
+    place-items: center;
+}
+
+// Flex/Grid 間距
+@mixin gap($size: m) {
+    gap: spacing($size);
+}
+
+@mixin gap-x($size: m) {
+    column-gap: spacing($size);
+}
+
+@mixin gap-y($size: m) {
+    row-gap: spacing($size);
+}
+
+// 按鈕內距（會有多組，若沒重複就別用）
+@mixin button-padding-20-16 {
+    @include padding-y($spacing-m);
+    @include padding-x($spacing-l);
+
+    @include mobile {
+        @include padding-y($spacing-s);
+        @include padding-x($spacing-xs);
+    }
+}
+
+// 桌面版隱藏，RWD 顯示
+@mixin hide-desktop-show-rwd {
+    display: none;
+
+    @include tablet {
+        display: block;
+    }
+}
+
+//icon cursor
+@mixin cursor-pointer {
+    cursor: pointer
+}
