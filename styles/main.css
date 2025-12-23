@@ -9,93 +9,155 @@
 /* 圓角 */
 /* 字體：英文中文使用字體不同 */
 /* 字級 */
+/* 間距系統 */
 h1 {
-  font-size: var(48px);
+  font-size: 48px;
   line-height: 150%;
   letter-spacing: 0.02em;
   font-weight: 700;
-  font-family: var("Josefin Sans", "Noto Sans TC", sans-serif);
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
 }
 @media (max-width: 428px) {
   h1 {
-    font-size: var(32px);
+    font-size: 32px;
   }
 }
 
 h2 {
-  font-size: var(36px);
+  font-size: 36px;
   line-height: 150%;
   letter-spacing: 0.02em;
   font-weight: 700;
-  font-family: var("Josefin Sans", "Noto Sans TC", sans-serif);
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
 }
 @media (max-width: 428px) {
   h2 {
-    font-size: var(28px);
+    font-size: 28px;
   }
 }
 
 h3 {
-  font-size: var(32px);
+  font-size: 32px;
   line-height: 150%;
   letter-spacing: 0.02em;
   font-weight: 700;
-  font-family: var("Josefin Sans", "Noto Sans TC", sans-serif);
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
 }
 @media (max-width: 428px) {
   h3 {
-    font-size: var(24px);
+    font-size: 24px;
   }
 }
 
 h4 {
-  font-size: var(28px);
+  font-size: 28px;
   line-height: 150%;
   letter-spacing: 0.02em;
   font-weight: 700;
-  font-family: var("Josefin Sans", "Noto Sans TC", sans-serif);
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
 }
 @media (max-width: 428px) {
   h4 {
-    font-size: var(20px);
+    font-size: 20px;
   }
 }
 
 .body-1 {
-  font-size: var(24px);
+  font-size: 24px;
   line-height: 150%;
   letter-spacing: 0.02em;
   font-weight: 700;
-  font-family: var("Josefin Sans", "Noto Sans TC", sans-serif);
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
 }
 @media (max-width: 428px) {
   .body-1 {
-    font-size: var(20px);
+    font-size: 20px;
   }
 }
 
 .body-2 {
-  font-size: var(20px);
+  font-size: 20px;
   line-height: 150%;
   letter-spacing: 0.02em;
   font-weight: 700;
-  font-family: var("Josefin Sans", "Noto Sans TC", sans-serif);
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
 }
 @media (max-width: 428px) {
   .body-2 {
-    font-size: var(18px);
+    font-size: 18px;
   }
 }
 
 .body-3 {
-  font-size: var(16px);
+  font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.02em;
   font-weight: 500;
-  font-family: var("Josefin Sans", "Noto Sans TC", sans-serif);
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
 }
 @media (max-width: 428px) {
   .body-3 {
-    font-size: var(16px);
+    font-size: 16px;
   }
+}
+
+body {
+  background-color: #363636;
+  margin: 40px auto;
+}
+
+.about-card {
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  max-width: 636px;
+  padding: 36px;
+}
+.about-card .card-body {
+  display: flex;
+  justify-content: space-between;
+}
+.about-card .card-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about-card .card-text-wrapper .card-title {
+  margin-bottom: 12px;
+}
+.about-card .badge-group {
+  display: flex;
+  gap: 12px;
+}
+.about-card .badge-group .badge {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+}
+.about-card .badge-group .badge-outline {
+  color: #7F94E2;
+  border: 2px solid #A6B6F1;
+  border-radius: 999px;
+}
+.about-card .badge-group .body-3 {
+  font-weight: 700;
+}
+.about-card .body-1 {
+  color: #9A9A9A;
+}
+.about-card .card-img {
+  display: block;
+  width: 169px;
+  height: 208px;
+  border-radius: 24px;
+  background-color: #F0F0F0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.about-card .card-img img {
+  margin-left: -51px;
+  height: 160px;
 }/*# sourceMappingURL=main.css.map */

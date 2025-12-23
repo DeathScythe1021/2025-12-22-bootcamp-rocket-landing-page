@@ -1,0 +1,58 @@
+body {
+  background-color: $neutral-700;
+  margin: $spacing-5xl auto;
+}
+.about-card {
+  font-family: $font-main;
+  background-color: $neutral-0;
+  border-radius: $spacing-xl;
+  max-width: 636px;
+  padding: $spacing-4xl;
+  .card-body {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .card-title {
+      margin-bottom: $spacing-s;
+    }
+  }
+  .badge-group {
+    display: flex;
+    gap: $spacing-s;
+    .badge {
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+    }
+    .badge-outline {
+      color: $primary-blue-400;
+      border: 2px solid $primary-blue-300;
+      border-radius: 999px;
+    }
+    .body-3 {
+      font-weight: 700;
+    }
+  }
+  .body-1 {
+    color: $neutral-500;
+  }
+  .card-img {
+    display: block;
+    width: 169px;
+    height: 208px;
+    border-radius: $spacing-xl;
+    background-color: $neutral-200;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    img {
+      margin-left: -51px;
+      height: 160px;
+    }
+  }
+}
