@@ -1,0 +1,28 @@
+.coach-info-card {
+    background-color: aqua;
+    width: 251px;
+    height: 160px;
+    position: relative;
+
+
+
+    margin: 50px; //合併到主頁時請千萬別複製這行
+}
+
+.coach-info-box img {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+}
+
+.coach-info-btn {
+    width: 52px;
+    height: 84px;
+    background-color: brown;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    right: 0; 
+}
