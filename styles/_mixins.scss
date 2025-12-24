@@ -60,6 +60,12 @@
     }
 }
 
+@mixin notebook {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
 // 圓角系統
 @mixin box-outline($radius-size: md, $border-width: 2px, $border-color: $neutral) {
     // 1. 邊框邏輯
@@ -131,4 +137,25 @@
 //icon cursor
 @mixin cursor-pointer {
     cursor: pointer
+}
+
+//水平滾動
+@mixin horizontal-scroll($gap: 0, $scrollbar-height: 8px) {
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: $gap;
+
+    // 美化滾動條
+    &::-webkit-scrollbar {
+        height: $scrollbar-height;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+    }
 }
