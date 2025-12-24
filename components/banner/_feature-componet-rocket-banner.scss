@@ -1,0 +1,300 @@
+.rocket-banner{
+    margin-top: $spacing-8xl;
+    background-image: url(../assets/banner/banner-bg.png);
+    min-height: 757px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-8xl;
+    padding: 127px 70px 182px;
+}
+.rocket-card{
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    height: 448px;
+    width: 440px;
+    border-radius: $radius-lg ;
+    border: 1px solid $neutral-200; 
+    box-shadow: 0 8px 24px $primary-blue-200;
+    background-color: $neutral-0 ;
+    align-items: center;  
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0 24px 0;
+}
+
+.coworking-card{
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    height: 448px;
+    width: 440px;
+    border-radius: $radius-lg ;
+    border: 1px solid $neutral-200; 
+    box-shadow: 0 8px 24px $primary-blue-200;
+    background-color: $neutral-0 ;
+    align-items: center;  
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0 24px 0;
+}
+
+.rocket-card-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -40px;
+}
+
+.rocket-card-title{
+    align-items: center;
+    font-size: $fs-h1;
+    font-weight: 700;
+    font-family: $font-main;
+}
+
+.rocket-card-subtitle{
+    margin: 4px 0 0;
+    font-size: $fs-body1;
+    color: $neutral-500;
+    text-align: center;
+    margin-bottom: $spacing-m;
+    font-family: $font-main;
+}
+
+.rocket-card-content{
+    font-weight: 700;
+    font-size: $fs-body2;
+    text-align: center;
+    margin: 0;
+    line-height: 175%;
+    font-family: $font-main;
+}
+
+.rocket-divider{
+    font-size: $fs-h1;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+    font-family: $font-main;
+}
+.rocket-card-logo{
+    width: 124px;
+    height: 124px;
+    border-radius: 50%;
+    border: 2px solid $neutral-200;
+    display: grid;
+    place-items: center;
+    margin-bottom: 24px;
+}
+
+.rocket-card-logo img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+}
+
+.rocket-badge{
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    width: 120px;
+    height: 120px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 20px 0 $primary-blue-200;
+    background-image:radial-gradient(
+        circle at center bottom,
+        $primary-blue-200 50%,
+        transparent 60%
+        );
+}
+
+
+
+.rocket-badge-icon{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.rocket-badge-icon-mb{
+    display:none;
+}
+
+.coworking-badge{
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    width: 120px;
+    height: 120px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 20px 0 $primary-violet-200;
+    background-image:radial-gradient(
+        circle at center bottom,
+        $primary-violet-200 50%,
+        transparent 60%
+        );
+}
+
+
+
+.coworking-badge-icon{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.coworking-badge-icon-mb{
+    display:none;
+}
+
+@media (max-width: 768px) {
+
+  .rocket-divider { display: none; }
+  .rocket-card-content { display: none; }
+  .rocket-badge{ display: none;}
+  .coworking-badge{ display: none;}
+
+  .rocket-banner {
+    flex-direction: column;
+    gap: 16px;
+    padding-left:10px;
+    padding-right:10px;
+  }
+
+  .rocket-card {
+    width: 100%;
+    max-width: 300px;
+    min-width: 300px;
+    height: 84px;
+    padding: 14px 56px 14px 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+  }
+
+  .coworking-card{
+    width: 100%;
+    max-width: 300px;
+    min-width: 300px;
+    height: 84px;
+    padding: 14px 56px 14px 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+  }
+
+  .rocket-card-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .rocket-card-logo   { order: 0; }
+  .rocket-card-header { order: 1; }
+
+  .rocket-card-logo {
+    position: absolute;
+    left: 10%;
+    top: 34%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    flex: 0 0 auto;
+  }
+
+  .rocket-card-logo img {
+    width: 32px;
+    height: 32px;
+    display:block;
+  }
+
+  .rocket-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 0;
+    margin: 0;
+  }
+
+  .rocket-card-title {
+    padding-left: 30px;
+    font-size: $fs-m-h1;
+    margin: 0;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .rocket-card-subtitle {
+    font-size: $fs-m-body1;
+    margin: 0;
+    color: $neutral-500;
+    width: 200px;
+  }
+
+  .rocket-badge-mb{
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    left: auto;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 20px 0 0 $primary-blue-200;
+  }
+
+  .coworking-badge-mb {
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    left: auto;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 20px 0 0 $primary-violet-200;
+  }
+
+  .rocket-badge-icon-mb,
+  .coworking-badge-icon-mb{
+    transform:translateX(10px) ;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .rocket-badge-icon,
+  .coworking-badge-icon {
+    display: none;
+  }
+}
