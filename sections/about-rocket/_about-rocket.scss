@@ -1,0 +1,71 @@
+.about-rocket {
+  background-color: $primary-blue-100;
+  padding: 60px 72px;
+  border-radius: $radius-ex-lg;
+  display: flex;
+  justify-content: space-between;
+  gap: $spacing-3xl;
+  .about-rocket-content {
+    flex: 1;
+  }
+  .section-header {
+    .h2 {
+      font-size: $fs-h1;
+      margin-bottom: $spacing-5xl;
+    }
+    p {
+      margin-bottom: $spacing-xl;
+      font-size: $fs-body2;
+      font-weight: 400;
+    }
+  }
+
+  @media (max-width: 996px) {
+    padding: $spacing-4xl $spacing-6xl;
+    border-radius: $radius-lg;
+    flex-direction: column;
+    gap: $spacing-xl;
+    .section-eyebrow {
+      font-size: $fs-m-body3;
+    }
+    .section-header {
+      .h2 {
+        font-size: $fs-m-h1;
+        margin-bottom: $spacing-m;
+      }
+      p {
+        margin-bottom: $spacing-m;
+        font-size: $fs-m-body3;
+      }
+    }
+  }
+}
+.about-card-scroll-list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-3xl;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  flex-shrink: 0;
+  max-width: 100%;
+  height: 592px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  .about-card {
+    scroll-snap-align: start;
+    max-width: 100%;
+  }
+  .card-body {
+    gap: $spacing-2xl;
+  }
+
+  @media (max-width: 996px) {
+    gap: $spacing-xl;
+    scroll-snap-type: none;
+    height: 100%;
+    .card-body {
+      gap: 0px;
+    }
+  }
+}
