@@ -1,0 +1,81 @@
+.detail-card-wrapper {
+  .detail-card {
+    font-family: $font-main;
+    color: $neutral-700;
+    background-color: $neutral-0;
+    background-image: url("../assets/training/training-bg.png");
+    border-radius: $spacing-m;
+    border: 2px solid $neutral-200;
+    padding: 0px $spacing-9xl $spacing-5xl $spacing-6xl;
+    margin-top: $spacing-3xl;
+    list-style: none;
+  }
+  ul {
+    list-style: none;
+  }
+  ol {
+    list-style-position: inside;
+  }
+  .mark-style {
+    font-weight: 700;
+    background-image: linear-gradient(transparent 50%, #ffeea3 50%);
+  }
+  .card-body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: $spacing-6xl;
+  }
+  .detail-card-title {
+    margin-top: -$spacing-3xl;
+    margin-bottom: $spacing-2xl;
+    width: 100%;
+    h3 {
+      padding: $spacing-s $spacing-5xl;
+      border: 2px solid $neutral-700;
+      border-radius: $spacing-s;
+      box-shadow: $spacing-xxs $spacing-xxs 0 $neutral-700;
+      background-color: $neutral-0;
+      width: fit-content;
+    }
+  }
+  .card-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-4xl;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .card-content h4 {
+    width: fit-content;
+    padding-bottom: 1px;
+    border-bottom: 3px solid $neutral-700;
+    margin-bottom: $spacing-m;
+  }
+  .img-wrapper {
+    align-self: center;
+    flex: 0 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .detail-card {
+      padding: 0px $spacing-6xl $spacing-3xl $spacing-6xl;
+    }
+    .card-body {
+      flex-direction: column;
+      align-items: stretch;
+      gap: $spacing-2xl;
+    }
+    .detail-card-title {
+      order: 1;
+      margin-bottom: $spacing-xl;
+    }
+    .img-wrapper {
+      order: 2;
+    }
+    .card-content-wrapper {
+      order: 3;
+    }
+  }
+}
