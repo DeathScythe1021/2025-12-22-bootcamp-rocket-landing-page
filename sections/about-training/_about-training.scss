@@ -1,0 +1,15 @@
+.about-training {
+  .detail-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-6xl;
+  }
+  .detail-card:nth-child(even) {
+    .card-body {
+      flex-direction: row-reverse;
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+    }
+  }
+}
