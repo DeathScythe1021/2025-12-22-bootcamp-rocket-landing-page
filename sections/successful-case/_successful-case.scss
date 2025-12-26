@@ -22,14 +22,14 @@
     @include flex-center(24px);
 
     img {
-        width: 100%;
-        max-width: 306px;
-        aspect-ratio: 306 / 204;
+        width: 306px;
+        flex: 0 0 306px; // = 不放大不縮小，固定 306
+        height: auto;
 
         @include notebook {
             width: 240px;
-            min-width: 240px;
-            aspect-ratio: 240 / 160;
+            flex: 0 0 240px;
+            height: auto;
         }
     }
 }
