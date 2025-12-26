@@ -1,0 +1,46 @@
+.successful-case-container {
+    @include flex-center;
+    @include margin-auto;
+    height: 694px; //設計稿沒高度 用92+92+510px反推
+    padding: 92px 48px;
+}
+
+.successful-case-box {
+    @include flex-center-col(28px);
+    width: 100%;
+    max-width: 1296px;
+    height: 510px;
+    justify-content: space-between;
+}
+
+.successful-case-box-title {
+    width: 100%;
+    text-align: center;
+}
+
+.successful-case-box-4pic {
+    @include flex-center(24px);
+
+    img {
+        width: 306px;
+        flex: 0 0 306px; // = 不放大不縮小，固定 306
+        height: auto;
+
+        @include notebook {
+            width: 240px;
+            flex: 0 0 240px;
+            height: auto;
+        }
+    }
+}
+
+.successful-case-box-scroll {
+    @include flex-center-col(28px);
+    width: 100%;
+
+    @include notebook {
+        @include horizontal-scroll(24px); //滾動mixins
+        //若要改mixins參數請通知我，例如滑動條太礙眼，想取消之類的
+        align-items: flex-start;
+    }
+}
