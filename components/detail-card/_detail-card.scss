@@ -59,6 +59,7 @@
 
   @media (max-width: 768px) {
     .detail-card {
+      border-radius: 0;
       padding: 0px $spacing-6xl $spacing-3xl $spacing-6xl;
     }
     .card-body {
