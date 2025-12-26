@@ -1,0 +1,47 @@
+.training-box {
+    @include flex-center-col(60px);
+    padding: 124px 48px;
+
+    @include mobile {
+        padding: 48px;
+    }
+}
+
+.training-fee-content {
+    display: flex;
+    gap: $spacing-3xl;
+    padding: $spacing-l;
+
+    @include mobile {
+        padding: $spacing-l 0;
+        gap: 16px;
+    }
+}
+
+.training-fee-content-icon img {
+
+    @include tablet {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.training-fee,
+.training-process {
+    width: 100%;
+    max-width: 856px;
+
+    @include mobile {
+        width: 100%;
+        max-width: 332px;
+    }
+}
+
+.border-bot-gray {
+    border-bottom: 2px solid $neutral-200;
+}
+
+.training-fee-content-text a {
+    color: inherit;
+    font-family: inherit;
+}

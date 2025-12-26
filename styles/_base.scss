@@ -82,6 +82,23 @@ h4 {
   }
 }
 
+.body-3-fw-400 {
+  font-size: $fs-body3;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  font-family: $font-main;
+
+  span {
+    font-weight: 700;
+    margin-bottom: $spacing-xs;
+  }
+
+  @media (max-width: 428px) {
+    font-size: $fs-m-body3;
+  }
+}
+
 .body-4 {
   color: $neutral-600;
   font-size: $fs-body3;
