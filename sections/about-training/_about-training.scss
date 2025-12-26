@@ -49,6 +49,8 @@
     margin-bottom: $spacing-9xl;
     @media (max-width: 768px) {
       margin-bottom: $spacing-3xl;
+      padding-left: $spacing-6xl;
+      padding-right: $spacing-6xl;
     }
     h3 {
       margin-bottom: $spacing-5xl;
@@ -142,14 +144,7 @@
       }
       .coach-info-card {
         flex-shrink: 0;
-        width: 100vw;
-        max-width: none;
-        scroll-snap-align: start;
-        margin-bottom: $spacing-2xl;
-      }
-      .coach-info-card {
-        flex-shrink: 0;
-        width: 100vw;
+        width: calc(100vw - 98px);
         max-width: none;
         scroll-snap-align: start;
         margin-bottom: $spacing-2xl;
