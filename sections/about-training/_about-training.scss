@@ -95,7 +95,6 @@
     display: none;
   }
 
-  // 根據選中狀態顯示對應教練資料
   #coach-weijie:checked ~ .coaches .coach-profile-desktop #data-weijie,
   #coach-yinmin:checked ~ .coaches .coach-profile-desktop #data-yinmin,
   #coach-justin:checked ~ .coaches .coach-profile-desktop #data-justin,
