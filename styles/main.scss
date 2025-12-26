@@ -3,7 +3,6 @@
 @import "./mixins";
 @import "./base";
 @import "../components/register-now-btn/register-now-btn";
-@import "../components/about-card/about-card";
 @import "../components/coach-info/coach-info";
 @import "../components/header/header-marquee";
 @import "../components/about-card/about-card";
@@ -12,4 +11,11 @@
 @import "../components/service-card/service-card";
 @import "../sections/successful-case/successful-case";
 @import "../sections/organizing-unit/organizing-unit";
+<<<<<<< HEAD
 @import "../sections/training/training";
+=======
+@import "../sections/training/training";
+@import "../components/carousel/carousel-row";
+@import "../components/footer/feature-componet-footer";
+@import "../sections/about-rocket/about-rocket";
+>>>>>>> feature-section-trainging
