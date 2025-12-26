@@ -159,3 +159,17 @@
         border-radius: 4px;
     }
 }
+
+// 定義 Mixin：預設 $cols 為 3, $gap 為 28px
+@mixin grid-layout($cols: 3, $r-gap: $spacing-6xl, $c-gap: $spacing-2xl) {
+    display: grid;
+    grid-template-columns: repeat($cols, 1fr);
+    row-gap: $r-gap; //上下
+    column-gap: $c-gap; //左右
+    place-items: center;
+}
+
+//半橘底
+@mixin mark-style-orange {
+    background-image: linear-gradient(transparent 50%, $accent-orange 50%);
+}

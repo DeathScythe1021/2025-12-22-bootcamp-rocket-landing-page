@@ -4,10 +4,7 @@
     //以下RWD
     @include tablet {
         flex-direction: column;
-        padding: 0 48px;
         gap: $spacing-5xl;
-
-
     }
 }
 
@@ -24,7 +21,6 @@
     //以下RWD 這邊用tablet(max-width用768px就縮排) 不然768~428之間很擠 
     @include tablet {
         flex-direction: column;
-        // padding: 0 48px;
         gap: $spacing-m;
 
         &:nth-of-type(even) {

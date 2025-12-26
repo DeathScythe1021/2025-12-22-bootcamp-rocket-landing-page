@@ -1,26 +1,26 @@
-
-.carousel-container{
-    display: flex;
-    gap: 24px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x proximity;
+.carousel-container {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
 }
 
-.carousel-photo{
-    height: 424px;
-    padding-bottom: 16px;
-    padding-top: 16px;
-    flex-shrink: 0;
-    border-radius: 16px;
-    overflow: hidden;
-    scroll-snap-align: start;
+.carousel-photo {
+  height: 424px;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  scroll-snap-align: start;
 }
 
-.carousel-container-mb{
+.carousel-container-mb {
   display: none;
 }
-.carousel-photo-mb{
+
+.carousel-photo-mb {
   display: none;
 }
 
@@ -28,6 +28,7 @@
   .carousel-container {
     display: none;
   }
+
   .carousel-photo {
     display: none;
   }
