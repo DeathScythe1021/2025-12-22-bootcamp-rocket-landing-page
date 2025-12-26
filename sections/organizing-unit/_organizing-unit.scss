@@ -1,0 +1,58 @@
+.organizing-unit-container {
+    width: 100%;
+    background-color: $neutral-200;
+    position: relative;
+
+    @include mobile {
+        height: auto;
+    }
+}
+
+.organizing-unit-title {
+    position: absolute;
+    left: 72px;
+    top: -24px;
+
+    @include mobile {
+        left: 48px;
+        top: -18px;
+    }
+}
+
+.organizing-unit-box {
+    @include flex-center(24px);
+    justify-content: flex-start;
+    padding: 56px 72px 40px 72px;
+    //=================================若改成@include horizontal-scroll(24px) 則可在電腦版用拉條滑動滑動
+    //後面不輸入數字代表自動帶入預設scrollbar-height: 8px ;詳細可去mixins查看設定
+    //下面其中0代表 scrollbar-height: 0 ;=滑動條不佔空間=不可拉動=不可滑動 
+    @include horizontal-scroll(24px, 0);
+    //=================================
+
+    @include mobile {
+        padding: 36px 48px 16px 48px;
+    }
+
+}
+
+.organizing-unit-card {
+    @include flex-center-col(16px);
+    align-items: flex-start;
+}
+
+.organizing-unit-pic {
+    @include flex-center-col;
+    @include box-outline(md, 0, white);
+    background-color: white;
+    width: 196px;
+    height: 148px;
+
+    @include mobile {
+        width: 156px;
+        height: 120px;
+    }
+}
+
+.organizing-unit-text {
+    color: $neutral-700
+}
