@@ -1,7 +1,7 @@
 .rocket-banner{
     margin-top: $spacing-8xl;
     background-image: url(../assets/banner/banner-bg.png);
-    min-height: 757px;
+    max-height: 757px;
     width: 100%;
     display: flex;
     position: relative;
@@ -175,6 +175,8 @@
     gap: 16px;
     padding-left:10px;
     padding-right:10px;
+    padding-top:60px;
+    padding-bottom:88px;
   }
 
   .rocket-card {
