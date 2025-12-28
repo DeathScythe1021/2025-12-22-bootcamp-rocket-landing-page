@@ -888,7 +888,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   height: 694px;
-  padding: 92px 48px;
+  padding: 92px 0;
 }
 
 .successful-case-box {
@@ -915,15 +915,15 @@ body {
   gap: 24px;
 }
 .successful-case-box-4pic img {
-  width: 306px;
-  flex: 0 0 306px;
-  height: auto;
+  width: 100%;
+  max-width: 306px;
+  aspect-ratio: 306/204;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1439px) {
   .successful-case-box-4pic img {
     width: 240px;
-    flex: 0 0 240px;
-    height: auto;
+    min-width: 240px;
+    aspect-ratio: 240/160;
   }
 }
 
@@ -935,12 +935,11 @@ body {
   gap: 28px;
   width: 100%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1439px) {
   .successful-case-box-scroll {
     overflow-x: auto;
     overflow-y: hidden;
     gap: 24px;
-    align-items: flex-start;
   }
   .successful-case-box-scroll::-webkit-scrollbar {
     height: 8px;
@@ -951,6 +950,12 @@ body {
   .successful-case-box-scroll::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 4px;
+  }
+}
+@media (max-width: 1024px) {
+  .successful-case-box-scroll {
+    align-items: flex-start;
+    padding: 92px 48px;
   }
 }
 
@@ -1373,7 +1378,7 @@ body {
   background-color: #F8F9FD;
 }
 .about-training .container {
-  max-width: 1296px;
+  max-width: 1076px;
   margin-left: auto;
   margin-right: auto;
 }
