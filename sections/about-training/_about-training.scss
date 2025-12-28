@@ -1,6 +1,13 @@
 .about-training {
   font-family: $font-main;
   background-color: $neutral-100;
+
+  .container {
+  max-width: 1296px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
   hgroup {
     display: flex;
     flex-direction: column;
@@ -165,6 +172,7 @@
     background-color: $primary-blue-100;
     border: 2px solid $neutral-700;
     border-radius: $radius-md;
+    transform: translateY($spacing-6xl);
     &:hover {
       .button-icon {
         display: block;
@@ -172,6 +180,11 @@
         transition: 0.5s;
         margin-left: $spacing-l;
       }
+    }
+    @media (max-width: 768px) {
+      margin-left: $spacing-6xl;
+      margin-right: $spacing-6xl;
+      transform: translateY($spacing-xl);
     }
   }
   .button-go {
