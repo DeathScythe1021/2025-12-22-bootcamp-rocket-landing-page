@@ -139,6 +139,297 @@ body {
   color: #363636;
 }
 
+.rocket-banner {
+  margin-top: 64px;
+  background-image: url(../assets/banner/banner-bg.png);
+  max-height: 757px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  padding: 127px 70px 182px;
+}
+
+.rocket-card {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  height: 448px;
+  width: 440px;
+  border-radius: 24px;
+  border: 1px solid #F0F0F0;
+  box-shadow: 0 8px 24px #BFC9F0;
+  background-color: #FFFFFF;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 0 24px 0;
+}
+
+.coworking-card {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  height: 448px;
+  width: 440px;
+  border-radius: 24px;
+  border: 1px solid #F0F0F0;
+  box-shadow: 0 8px 24px #BFC9F0;
+  background-color: #FFFFFF;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 0 24px 0;
+}
+
+.rocket-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -40px;
+}
+
+.rocket-card-title {
+  align-items: center;
+  font-size: 48px;
+  font-weight: 700;
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
+}
+
+.rocket-card-subtitle {
+  margin: 4px 0 0;
+  font-size: 24px;
+  color: #9A9A9A;
+  text-align: center;
+  margin-bottom: 16px;
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
+}
+
+.rocket-card-content {
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  line-height: 175%;
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
+}
+
+.rocket-divider {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1;
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
+}
+
+.rocket-card-logo {
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  border: 2px solid #F0F0F0;
+  display: grid;
+  place-items: center;
+  margin-bottom: 24px;
+}
+
+.rocket-card-logo img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+}
+
+.rocket-badge {
+  position: absolute;
+  left: 50%;
+  bottom: -50px;
+  width: 120px;
+  height: 120px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 20px 0 #BFC9F0;
+  background-image: radial-gradient(circle at center bottom, #BFC9F0 50%, transparent 60%);
+}
+
+.rocket-badge-icon {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.rocket-badge-icon-mb {
+  display: none;
+}
+
+.coworking-badge {
+  position: absolute;
+  left: 50%;
+  bottom: -50px;
+  width: 120px;
+  height: 120px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 20px 0 #EEE5FF;
+  background-image: radial-gradient(circle at center bottom, #EEE5FF 50%, transparent 60%);
+}
+
+.coworking-badge-icon {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.coworking-badge-icon-mb {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .rocket-divider {
+    display: none;
+  }
+  .rocket-card-content {
+    display: none;
+  }
+  .rocket-badge {
+    display: none;
+  }
+  .coworking-badge {
+    display: none;
+  }
+  .rocket-banner {
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 60px;
+    padding-bottom: 88px;
+  }
+  .rocket-card {
+    width: 100%;
+    max-width: 300px;
+    min-width: 300px;
+    height: 84px;
+    padding: 14px 56px 14px 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+  }
+  .coworking-card {
+    width: 100%;
+    max-width: 300px;
+    min-width: 300px;
+    height: 84px;
+    padding: 14px 56px 14px 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+  }
+  .rocket-card-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    flex: 1;
+  }
+  .rocket-card-logo {
+    order: 0;
+  }
+  .rocket-card-header {
+    order: 1;
+  }
+  .rocket-card-logo {
+    position: absolute;
+    left: 10%;
+    top: 34%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    flex: 0 0 auto;
+  }
+  .rocket-card-logo img {
+    width: 32px;
+    height: 32px;
+    display: block;
+  }
+  .rocket-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 0;
+    margin: 0;
+  }
+  .rocket-card-title {
+    padding-left: 30px;
+    font-size: 32px;
+    margin: 0;
+    text-align: center;
+    max-width: 100%;
+  }
+  .rocket-card-subtitle {
+    font-size: 20px;
+    margin: 0;
+    color: #9A9A9A;
+    width: 200px;
+  }
+  .rocket-badge-mb {
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    left: auto;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 20px 0 0 #BFC9F0;
+  }
+  .coworking-badge-mb {
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    left: auto;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 20px 0 0 #EEE5FF;
+  }
+  .rocket-badge-icon-mb,
+  .coworking-badge-icon-mb {
+    transform: translateX(10px);
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .rocket-badge-icon,
+  .coworking-badge-icon {
+    display: none;
+  }
+}
 .register-now-btn-box:hover .register-now-btn-icon {
   display: block;
 }
@@ -232,6 +523,10 @@ body {
   width: 100%;
   height: 64px;
   position: fixed;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
 }
 
 .infinite-marquee {
@@ -879,7 +1174,7 @@ body {
 
 @media (max-width: 768px) {
   .component-footer {
-    margin: 0;
+    margin: 20px 0 20px;
     color: #363636;
   }
   .footer {
@@ -894,26 +1189,34 @@ body {
 }
 .about-rocket {
   background-color: #E5EBFF;
-  padding: 60px 72px;
+}
+.about-rocket .container {
+  max-width: 1296px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-rocket .about-rocket-info {
+  padding-top: 60px;
+  padding-bottom: 60px;
   border-radius: 40px;
   display: flex;
   justify-content: space-between;
   gap: 32px;
 }
-.about-rocket .about-rocket-content {
+.about-rocket .about-rocket-info .about-rocket-content {
   flex: 1;
 }
-.about-rocket .section-header .h2 {
+.about-rocket .about-rocket-info .section-header .h2 {
   font-size: 48px;
   margin-bottom: 40px;
 }
-.about-rocket .section-header p {
+.about-rocket .about-rocket-info .section-header p {
   margin-bottom: 24px;
   font-size: 20px;
   font-weight: 400;
 }
 @media (max-width: 996px) {
-  .about-rocket {
+  .about-rocket .about-rocket-info {
     padding: 36px 48px;
     border-radius: 24px;
     flex-direction: column;
@@ -1068,6 +1371,11 @@ body {
 .about-training {
   font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
   background-color: #F8F9FD;
+}
+.about-training .container {
+  max-width: 1296px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .about-training hgroup {
   display: flex;
@@ -1227,12 +1535,20 @@ body {
   background-color: #E5EBFF;
   border: 2px solid #363636;
   border-radius: 16px;
+  transform: translateY(48px);
 }
 .about-training .button-wrapper:hover .button-icon {
   display: block;
   opacity: 1;
   transition: 0.5s;
   margin-left: 20px;
+}
+@media (max-width: 768px) {
+  .about-training .button-wrapper {
+    margin-left: 48px;
+    margin-right: 48px;
+    transform: translateY(24px);
+  }
 }
 .about-training .button-go {
   width: 100%;
@@ -1249,5 +1565,27 @@ body {
 @media (max-width: 768px) {
   .about-training .button-icon {
     display: none;
+  }
+}
+
+.index main {
+  padding-top: 64px;
+}
+.index main .rocket-banner {
+  margin-top: 0;
+  position: relative;
+  z-index: 1;
+}
+.index main .about-rocket {
+  margin-top: -12px;
+  position: relative;
+  z-index: 2;
+}
+.index main .about-training hgroup h2 {
+  margin-top: -28px;
+}
+@media (max-width: 428px) {
+  .index main .training-box {
+    padding-bottom: 76px;
   }
 }/*# sourceMappingURL=main.css.map */
