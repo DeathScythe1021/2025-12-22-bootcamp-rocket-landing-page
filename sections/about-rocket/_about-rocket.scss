@@ -1,5 +1,6 @@
 .about-rocket {
   background-color: $primary-blue-100;
+  border-radius: $radius-ex-lg;
 
   .container {
     max-width: 1296px;
@@ -10,7 +11,6 @@
   .about-rocket-info {
     padding-top: 60px;
     padding-bottom: 60px;
-    border-radius: $radius-ex-lg;
     display: flex;
     justify-content: space-between;
     gap: $spacing-3xl;
@@ -18,7 +18,7 @@
       flex: 1;
     }
     .section-header {
-      .h2 {
+      .section-title {
         font-size: $fs-h1;
         margin-bottom: $spacing-5xl;
       }
@@ -31,9 +31,10 @@
   }
 
   @media (max-width: 996px) {
+    border-radius: $radius-lg;
+
     .about-rocket-info {
       padding: $spacing-4xl $spacing-6xl;
-      border-radius: $radius-lg;
       flex-direction: column;
       gap: $spacing-xl;
     }
@@ -41,7 +42,7 @@
       font-size: $fs-m-body3;
     }
     .section-header {
-      .h2 {
+      .section-title {
         font-size: $fs-m-h1;
         margin-bottom: $spacing-m;
       }
