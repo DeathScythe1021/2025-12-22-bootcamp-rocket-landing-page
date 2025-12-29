@@ -92,6 +92,7 @@ h4 {
   span {
     font-weight: 700;
     margin-bottom: $spacing-xs;
+    display: inline-block;
   }
 
   @media (max-width: 428px) {

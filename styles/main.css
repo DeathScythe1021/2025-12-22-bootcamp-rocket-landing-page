@@ -111,6 +111,7 @@ h4 {
 .body-3-fw-400 span {
   font-weight: 700;
   margin-bottom: 8px;
+  display: inline-block;
 }
 @media (max-width: 428px) {
   .body-3-fw-400 {
@@ -1108,11 +1109,6 @@ body {
 .training-fee-content-text a {
   color: inherit;
   font-family: inherit;
-}
-
-.training-fee-content-text span {
-  display: block;
-  margin-bottom: 8px;
 }
 
 .carousel-container {
