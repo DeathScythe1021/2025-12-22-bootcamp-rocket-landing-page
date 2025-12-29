@@ -1119,7 +1119,7 @@ body {
   font-weight: 700;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1439px) {
   .location-section {
     padding: 24px 0;
   }
@@ -1876,7 +1876,7 @@ body {
   color: inherit;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .rocket-banner {
     flex-direction: column;
     gap: 48px;
@@ -2041,4 +2041,7 @@ body {
   .coworking-badge-icon {
     display: none;
   }
+}
+.coworking-space-main {
+  padding-top: 64px;
 }/*# sourceMappingURL=main.css.map */
