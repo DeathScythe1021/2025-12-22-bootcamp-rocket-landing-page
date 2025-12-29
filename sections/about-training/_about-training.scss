@@ -96,6 +96,14 @@
   .coach-info-card {
     cursor: pointer;
     display: block;
+
+    &:focus-within {
+    background-color: $primary-blue-100;
+    }
+
+    img {
+      cursor: pointer;
+    }
   }
 
   .coach-profile-desktop .coach-data {
