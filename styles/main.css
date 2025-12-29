@@ -143,7 +143,7 @@ body {
 .rocket-banner {
   margin-top: 64px;
   background-image: url(../assets/banner/banner-bg.png);
-  max-height: 757px;
+  min-height: 757px;
   width: 100%;
   display: flex;
   position: relative;
@@ -315,20 +315,18 @@ body {
     gap: 16px;
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 60px;
-    padding-bottom: 88px;
   }
   .rocket-card {
-    width: 294px;
-    height: 134px;
+    width: 100%;
+    max-width: 300px;
+    min-width: 300px;
+    height: 84px;
     padding: 14px 56px 14px 56px;
     border-radius: 12px;
     display: flex;
     align-items: center;
     gap: 12px;
     position: relative;
-    border: 2px solid #E0E0E0;
-    box-shadow: 7px 7px 0 0 #BFC9F0;
   }
   .coworking-card {
     width: 100%;
@@ -393,16 +391,16 @@ body {
   .rocket-badge-mb {
     position: absolute;
     top: 50%;
-    right: -38px;
+    right: -18px;
     left: auto;
     transform: translateY(-50%);
-    width: 72px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: linear-gradient(to right, transparent 50%, #BFC9F0 50%);
+    box-shadow: 20px 0 0 #BFC9F0;
   }
   .coworking-badge-mb {
     position: absolute;
@@ -418,14 +416,7 @@ body {
     border-radius: 50%;
     box-shadow: 20px 0 0 #EEE5FF;
   }
-  .rocket-badge-icon-mb {
-    width: 60px;
-    height: 60px;
-    display: block;
-    z-index: 1;
-    transform: translateX(-3px);
-    border-radius: 50%;
-  }
+  .rocket-badge-icon-mb,
   .coworking-badge-icon-mb {
     transform: translateX(10px);
     display: block;
@@ -650,6 +641,9 @@ body {
   .about-card .badge-group {
     gap: 8px;
     margin-bottom: 12px;
+  }
+  .about-card .badge-group .badge-outline {
+    font-size: 12px;
   }
   .about-card .img-wrapper {
     justify-content: center;
@@ -1210,6 +1204,7 @@ body {
 }
 .about-rocket {
   background-color: #E5EBFF;
+  border-radius: 40px;
 }
 .about-rocket .container {
   max-width: 1296px;
@@ -1219,7 +1214,6 @@ body {
 .about-rocket .about-rocket-info {
   padding-top: 60px;
   padding-bottom: 60px;
-  border-radius: 40px;
   display: flex;
   justify-content: space-between;
   gap: 32px;
@@ -1227,7 +1221,7 @@ body {
 .about-rocket .about-rocket-info .about-rocket-content {
   flex: 1;
 }
-.about-rocket .about-rocket-info .section-header .h2 {
+.about-rocket .about-rocket-info .section-header .section-title {
   font-size: 48px;
   margin-bottom: 40px;
 }
@@ -1237,16 +1231,18 @@ body {
   font-weight: 400;
 }
 @media (max-width: 996px) {
+  .about-rocket {
+    border-radius: 24px;
+  }
   .about-rocket .about-rocket-info {
     padding: 36px 48px;
-    border-radius: 24px;
     flex-direction: column;
     gap: 24px;
   }
   .about-rocket .section-eyebrow {
     font-size: 16px;
   }
-  .about-rocket .section-header .h2 {
+  .about-rocket .section-header .section-title {
     font-size: 32px;
     margin-bottom: 16px;
   }
@@ -1404,8 +1400,6 @@ body {
   align-items: center;
 }
 .about-training .new-batch {
-  width: -moz-fit-content;
-  width: fit-content;
   display: flex;
   align-items: center;
   padding: 12px 20px;
@@ -1424,9 +1418,57 @@ body {
   border-right: 2px solid #F0F0F0;
   white-space: nowrap;
 }
-.about-training .new-batch .new-batch-text-wrapper {
+.about-training .new-batch .new-batch-ticker {
   font-weight: 500;
   padding: 5px 0;
+  display: flex;
+  max-width: 507px;
+  overflow-x: hidden;
+}
+.about-training .new-batch .new-batch-ticker-text {
+  white-space: nowrap;
+}
+.about-training .new-batch .new-batch-ticker-text span {
+  display: inline-block;
+}
+@media (max-width: 768px) {
+  .about-training .new-batch {
+    font-size: 14px;
+  }
+  .about-training .new-batch .new-batch-ticker {
+    max-width: 332px;
+  }
+  .about-training .new-batch .new-batch-ticker {
+    max-width: 211px;
+  }
+  .about-training .new-batch .new-batch-ticker-text span {
+    display: none;
+  }
+  @keyframes marquee-ticker-first {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-150%);
+    }
+  }
+  @keyframes marquee-ticker-second {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-250%);
+    }
+  }
+  .about-training .new-batch .new-batch-ticker-text:first-child {
+    animation: marquee-ticker-first 20s linear infinite;
+  }
+  .about-training .new-batch .new-batch-ticker-text:nth-child(2) {
+    display: block;
+    animation: marquee-ticker-second 20s linear infinite;
+    animation-delay: 10s;
+    margin-left: 16px;
+  }
 }
 .about-training .detail-card-list {
   display: flex;
@@ -1491,6 +1533,12 @@ body {
 .about-training .coach-info-card {
   cursor: pointer;
   display: block;
+}
+.about-training .coach-info-card:focus-within {
+  background-color: #E5EBFF;
+}
+.about-training .coach-info-card img {
+  cursor: pointer;
 }
 .about-training .coach-profile-desktop .coach-data {
   display: none;
