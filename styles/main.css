@@ -1415,12 +1415,12 @@ body {
     top: -10px;
     left: 70px;
     min-height: 69px;
-    padding-top: 12px;
-    padding-bottom: 16px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 16px 16px 12px 16px;
     margin: 0 0 24px;
-    background: url("/assets/promotion/promotion-lg.svg") no-repeat center/contain;
+    background-image: url("/assets/promotion/promotion-lg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     color: #363636;
     white-space: nowrap;
     box-sizing: border-box;
