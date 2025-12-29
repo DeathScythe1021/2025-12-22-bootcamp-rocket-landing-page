@@ -20,7 +20,6 @@
 .coworking-card {
   width: 440px;
   height: 448px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -169,7 +168,6 @@
     max-width: 294px;
     margin: 0;
     align-items: center;
-    box-sizing: border-box;
     display: visible;
   }
 
@@ -179,7 +177,6 @@
     max-width: 332px;
     margin: 0 48px;
     position: relative;
-    box-sizing: border-box;
     padding: 0 12px;
   }
 
@@ -261,7 +258,7 @@
     position: absolute;
     top: 50%;
     right: 20px;
-    transform: translate(70%,-50%);
+    transform: translate(70%, -50%);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -277,7 +274,7 @@
     position: absolute;
     top: 50%;
     right: 20px;
-    transform: translate(70%,-50%);
+    transform: translate(70%, -50%);
     width: 60px;
     height: 60px;
     border-radius: 50%;
