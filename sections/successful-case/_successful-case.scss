@@ -1,8 +1,11 @@
 .successful-case-container {
     @include flex-center;
     @include margin-auto;
-    height: 694px; //設計稿沒高度 用92+92+510px反推
-    padding: 92px 0;
+    padding: 92px 72px 120px;
+
+    @include big-notebook {
+        padding: 48px 48px 92px;
+    }
 }
 
 .successful-case-box {
@@ -11,6 +14,10 @@
     max-width: 1296px;
     height: 510px;
     justify-content: space-between;
+
+    @include big-notebook {
+        height: 406px;
+    }
 }
 
 .successful-case-box-title {
@@ -44,8 +51,6 @@
     }
 
     @include notebook {
-        //notebook=1024px，若改成1035px才會是最完美RWD，但1035不常用
         align-items: flex-start;
-        padding: 92px 48px;
     }
 }
