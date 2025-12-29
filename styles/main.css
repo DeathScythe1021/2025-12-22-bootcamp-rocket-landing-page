@@ -170,7 +170,6 @@ body {
 }
 
 .rocket-banner {
-  margin-top: 64px;
   background-image: url(../assets/banner/banner-bg.png);
   min-height: 757px;
   width: 100%;
@@ -179,7 +178,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 64px;
-  padding: 127px 70px 182px;
+  padding: 92px 0 22px;
 }
 
 .rocket-card-wrap,
@@ -194,7 +193,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 24px;
+  padding: 0;
   background: #FFFFFF;
   border: 1px solid #F0F0F0;
   border-radius: 24px;
@@ -310,14 +309,13 @@ body {
   display: block;
   text-decoration: none;
   color: inherit;
-  max-width: 332px;
 }
 
-@media (max-width: 428px) {
+@media (max-width: 1023px) {
   .rocket-banner {
     flex-direction: column;
     gap: 48px;
-    padding: 40px 16px 80px;
+    padding: 124px 48px 88px;
     min-height: 0;
     overflow: visible;
   }
@@ -901,7 +899,6 @@ body {
 }
 
 .rocket-banner {
-  margin-top: 64px;
   background-image: url(../assets/banner/banner-bg.png);
   min-height: 757px;
   width: 100%;
@@ -910,7 +907,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 64px;
-  padding: 127px 70px 182px;
+  padding: 92px 0 22px;
 }
 
 .rocket-card-wrap,
@@ -925,7 +922,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 24px;
+  padding: 0;
   background: #FFFFFF;
   border: 1px solid #F0F0F0;
   border-radius: 24px;
@@ -1041,14 +1038,13 @@ body {
   display: block;
   text-decoration: none;
   color: inherit;
-  max-width: 332px;
 }
 
-@media (max-width: 428px) {
+@media (max-width: 1023px) {
   .rocket-banner {
     flex-direction: column;
     gap: 48px;
-    padding: 40px 16px 80px;
+    padding: 124px 48px 88px;
     min-height: 0;
     overflow: visible;
   }
@@ -2436,7 +2432,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 64px;
-  padding: 127px 70px 182px;
+  padding: 92px 0 22px;
 }
 
 .rocket-card-wrap,
@@ -2573,7 +2569,7 @@ body {
   .rocket-banner {
     flex-direction: column;
     gap: 48px;
-    padding: 40px 16px 80px;
+    padding: 124px 48px 88px;
     min-height: 0;
     overflow: visible;
   }
@@ -2734,7 +2730,4 @@ body {
   .coworking-badge-icon {
     display: none;
   }
-}
-.coworking-space-main {
-  padding-top: 64px;
 }/*# sourceMappingURL=main.css.map */
