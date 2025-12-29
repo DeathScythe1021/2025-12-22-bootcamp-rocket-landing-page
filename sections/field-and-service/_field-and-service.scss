@@ -5,10 +5,10 @@
         padding: 48px;
     }
 
-    //使用notebook版本RWD才padding會符合設計稿，但在1050px附近會有點擠
-    //若不RWD整體區間都padding 48px會比較好看，但不符設計稿
-    //最好的方式是去組件改好RWD(carousel)，再各別component自擠
-    //但該部分不是我負責的範圍所以先這樣處理，等之後討論好在改
+    // 使用 notebook 版本 RWD 才 padding 會符合設計稿，但在1050px 附近會有點擠
+    // 若不 RWD 整體區間都 padding 48px會比較好看，但不符設計稿
+    // 最好的方式是去組件改好 RWD(carousel)，再各別 component 自擠
+    // 但該部分不是我負責的範圍所以先這樣處理，等之後討論好再改
 
     h2 {
         text-align: center;
