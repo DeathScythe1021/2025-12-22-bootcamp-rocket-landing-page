@@ -19,7 +19,6 @@
 .coworking-card {
   width: 440px;
   height: 448px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -133,7 +132,15 @@
   display: none;
 }
 
-@media (max-width: 428px) {
+.rocket-card-link,
+.coworking-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  max-width: 332px;
+}
+
+@media (max-width: 1024px) {
   .rocket-banner {
     flex-direction: column;
     gap: 48px;
@@ -160,7 +167,6 @@
     max-width: 294px;
     margin: 0;
     align-items: center;
-    box-sizing: border-box;
     display: visible;
   }
 
@@ -170,7 +176,7 @@
     max-width: 332px;
     margin: 0 48px;
     position: relative;
-    box-sizing: border-box;
+    padding: 0 12px;
   }
 
   .rocket-card {
@@ -184,6 +190,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
   }
 
   .coworking-card {
@@ -197,6 +204,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
   }
 
   .rocket-card-header {
@@ -249,7 +257,7 @@
     position: absolute;
     top: 50%;
     right: 20px;
-    transform: translateY(-50%);
+    transform: translate(70%, -50%);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -265,7 +273,7 @@
     position: absolute;
     top: 50%;
     right: 20px;
-    transform: translateY(-50%);
+    transform: translate(70%, -50%);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -279,11 +287,11 @@
   .rocket-badge-mb-bg {
     position: absolute;
     top: 50%;
-    left: 70%;
+    left: 0;
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0, -50%);
     z-index: -1;
     pointer-events: none;
     clip-path: inset(0 0 0 49%);
@@ -293,11 +301,11 @@
   .coworking-badge-mb-bg {
     position: absolute;
     top: 50%;
-    left: 70%;
+    left: 0;
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0, -50%);
     z-index: -1;
     pointer-events: none;
     clip-path: inset(0 0 0 49%);
