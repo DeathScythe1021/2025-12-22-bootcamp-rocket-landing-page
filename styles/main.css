@@ -111,6 +111,7 @@ h4 {
 .body-3-fw-400 span {
   font-weight: 700;
   margin-bottom: 8px;
+  display: inline-block;
 }
 @media (max-width: 428px) {
   .body-3-fw-400 {
@@ -318,16 +319,16 @@ body {
     padding-bottom: 88px;
   }
   .rocket-card {
-    width: 100%;
-    max-width: 300px;
-    min-width: 300px;
-    height: 84px;
+    width: 294px;
+    height: 134px;
     padding: 14px 56px 14px 56px;
     border-radius: 12px;
     display: flex;
     align-items: center;
     gap: 12px;
     position: relative;
+    border: 2px solid #E0E0E0;
+    box-shadow: 7px 7px 0 0 #BFC9F0;
   }
   .coworking-card {
     width: 100%;
@@ -392,16 +393,16 @@ body {
   .rocket-badge-mb {
     position: absolute;
     top: 50%;
-    right: -18px;
+    right: -38px;
     left: auto;
     transform: translateY(-50%);
-    width: 60px;
-    height: 60px;
+    width: 72px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    box-shadow: 20px 0 0 #BFC9F0;
+    background: linear-gradient(to right, transparent 50%, #BFC9F0 50%);
   }
   .coworking-badge-mb {
     position: absolute;
@@ -417,7 +418,14 @@ body {
     border-radius: 50%;
     box-shadow: 20px 0 0 #EEE5FF;
   }
-  .rocket-badge-icon-mb,
+  .rocket-badge-icon-mb {
+    width: 60px;
+    height: 60px;
+    display: block;
+    z-index: 1;
+    transform: translateX(-3px);
+    border-radius: 50%;
+  }
   .coworking-badge-icon-mb {
     transform: translateX(10px);
     display: block;
@@ -887,8 +895,12 @@ body {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  height: 694px;
-  padding: 92px 48px;
+  padding: 92px 72px 120px;
+}
+@media (max-width: 1439px) {
+  .successful-case-container {
+    padding: 48px 48px 92px;
+  }
 }
 
 .successful-case-box {
@@ -901,6 +913,11 @@ body {
   max-width: 1296px;
   height: 510px;
   justify-content: space-between;
+}
+@media (max-width: 1439px) {
+  .successful-case-box {
+    height: 406px;
+  }
 }
 
 .successful-case-box-title {
@@ -915,15 +932,15 @@ body {
   gap: 24px;
 }
 .successful-case-box-4pic img {
-  width: 306px;
-  flex: 0 0 306px;
-  height: auto;
+  width: 100%;
+  max-width: 306px;
+  aspect-ratio: 306/204;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1439px) {
   .successful-case-box-4pic img {
     width: 240px;
-    flex: 0 0 240px;
-    height: auto;
+    min-width: 240px;
+    aspect-ratio: 240/160;
   }
 }
 
@@ -935,12 +952,11 @@ body {
   gap: 28px;
   width: 100%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1439px) {
   .successful-case-box-scroll {
     overflow-x: auto;
     overflow-y: hidden;
     gap: 24px;
-    align-items: flex-start;
   }
   .successful-case-box-scroll::-webkit-scrollbar {
     height: 8px;
@@ -951,6 +967,11 @@ body {
   .successful-case-box-scroll::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 4px;
+  }
+}
+@media (max-width: 1024px) {
+  .successful-case-box-scroll {
+    align-items: flex-start;
   }
 }
 
