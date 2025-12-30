@@ -688,6 +688,7 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 36px;
+  width: 100%;
 }
 @media (max-width: 1024px) {
   .field-description-container {
@@ -701,8 +702,6 @@ body {
   align-items: center;
   justify-content: center;
   gap: 40px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .field-description-box:nth-of-type(even) .field-description-text-area {
   order: -1;
@@ -719,8 +718,8 @@ body {
 }
 
 .field-description-pic {
-  width: 526px;
-  height: 388px;
+  width: 100%;
+  aspect-ratio: 526/388;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1359,8 +1358,6 @@ body {
 .field-component {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 60px;
   gap: 28px;
   width: 100%;
@@ -1453,7 +1450,7 @@ body {
   .location-card {
     width: calc(100% - 32px);
     height: auto;
-    padding: 16px;
+    padding: 36px;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -1735,11 +1732,16 @@ body {
 .pricing-section {
   background: #EEE5FF;
   padding: 80px 24px;
+  align-self: center;
+  justify-items: center;
 }
 
 .pricing-head {
-  position: relative;
+  max-width: 1076px;
+  width: 100%;
   padding-top: 72px;
+  position: relative;
+  justify-content: flex-start;
 }
 
 .promo-bubble-text {
@@ -1766,8 +1768,7 @@ body {
   transform: none;
   display: inline-flex;
   align-items: center;
-  padding: 20px 16px;
-  min-height: 56px;
+  padding: 16px 16px;
   background: #FFFFFF;
   border: 2px solid #363636;
   border-radius: 12px;
@@ -1821,6 +1822,8 @@ body {
 }
 
 .pricing-grid {
+  max-width: 1076px;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
@@ -1830,9 +1833,10 @@ body {
   background: #FFFFFF;
   border-radius: 16px;
   border: 2px solid #363636;
-  padding: 36px 36px 32px;
+  padding: 36px 80px 48px;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .pricing-card.light {
@@ -1847,7 +1851,6 @@ body {
 
 .card-price {
   background: #F0F0F0;
-  border-radius: 12px;
   padding: 28px 24px;
   display: flex;
   align-items: baseline;
@@ -1917,7 +1920,9 @@ body {
 }
 
 .pricing-cta {
-  margin-top: 32px;
+  max-width: 1076px;
+  width: 100%;
+  margin: 56px 0 32px 0;
   height: 64px;
   display: flex;
   align-items: center;
@@ -1926,7 +1931,7 @@ body {
   border-radius: 12px;
   text-decoration: none;
   color: #363636;
-  background: transparent;
+  background-color: #F5F1FF;
 }
 
 @media (max-width: 768px) {
@@ -1937,27 +1942,27 @@ body {
     padding-top: 60px;
     margin-bottom: 24px;
   }
+  .promo-bubble-wrap {
+    position: static;
+    top: -50px;
+    left: 60px;
+  }
   .promo-bubble {
     --tail-left: 25px;
     --tail-bottom: -14px;
     --tail-size: 14px;
     width: 100%;
-    max-width: 386px;
+    max-width: 331px;
     white-space: normal;
-    min-height: 69px;
     margin: 0 0 16px;
     white-space: normal;
     display: block;
+    padding: 12px 10px;
   }
   .promo-bubble-text {
     white-space: normal;
     overflow-wrap: anywhere;
     word-break: break-word;
-  }
-  .promo-bubble-wrap {
-    position: static;
-    top: auto;
-    left: auto;
   }
   .pricing-grid {
     display: flex;
