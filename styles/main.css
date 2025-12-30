@@ -688,7 +688,6 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 36px;
-  width: 100%;
 }
 @media (max-width: 1024px) {
   .field-description-container {
@@ -702,6 +701,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .field-description-box:nth-of-type(even) .field-description-text-area {
   order: -1;
@@ -718,8 +719,8 @@ body {
 }
 
 .field-description-pic {
-  width: 100%;
-  aspect-ratio: 526/388;
+  width: 526px;
+  height: 388px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1262,15 +1263,15 @@ body {
     flex-direction: column;
     gap: 24px;
   }
-  .about-rocket .section-eyebrow {
-    font-size: 16px;
-  }
-  .about-rocket .section-header .section-title {
+  .about-rocket .about-rocket-info .section-header .section-title {
     font-size: 32px;
     margin-bottom: 16px;
   }
-  .about-rocket .section-header p {
+  .about-rocket .about-rocket-info .section-header p {
     margin-bottom: 16px;
+    font-size: 16px;
+  }
+  .about-rocket .section-eyebrow {
     font-size: 16px;
   }
 }
@@ -1358,6 +1359,8 @@ body {
 .field-component {
   display: flex;
   flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 60px;
   gap: 28px;
   width: 100%;
