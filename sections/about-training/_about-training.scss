@@ -1,0 +1,264 @@
+.about-training {
+  font-family: $font-main;
+  background-color: $neutral-100;
+
+  .container {
+    max-width: 1076px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  hgroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .new-batch {
+    display: flex;
+    align-items: center;
+    padding: $spacing-s $spacing-l;
+    border-radius: 50px;
+    background-color: $neutral-0;
+    box-shadow: 0 2px 4px #e8e8e8;
+    margin-top: $spacing-s;
+    margin-bottom: $spacing-6xl;
+    .new-batch-title {
+      font-weight: 700;
+      width: fit-content;
+      padding: 5px 12px 5px 0;
+      margin-right: $spacing-s;
+      border-right: 2px solid $neutral-200;
+      white-space: nowrap;
+    }
+    .new-batch-ticker {
+      font-weight: 500;
+      padding: 5px 0;
+      display: flex;
+      max-width: 507px;
+      overflow-x: hidden;
+    }
+    .new-batch-ticker-text {
+      white-space: nowrap;
+      span {
+        display: inline-block;
+      }
+    }
+    @media (max-width: 768px) {
+      font-size: $fs-m-body4;
+      
+      .new-batch-ticker {
+        max-width: 332px;
+      }
+      .new-batch-ticker {
+        max-width: 211px;
+      }
+      .new-batch-ticker-text {
+        span {
+          display: none;
+        }
+      }
+      @keyframes marquee-ticker-first {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(-150%);
+        }
+      }
+      @keyframes marquee-ticker-second {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-250%);
+        }
+      }
+      .new-batch-ticker-text:first-child {
+        animation: marquee-ticker-first 20s linear infinite;
+      }
+      .new-batch-ticker-text:nth-child(2) {
+        display: block;
+        animation: marquee-ticker-second 20s linear infinite;
+        animation-delay: 10s;
+        margin-left: 16px;
+      }
+    }
+  }
+
+  .detail-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-6xl;
+    margin-bottom: $spacing-8xl;
+  }
+  .detail-card:nth-child(even) {
+    .card-body {
+      flex-direction: row-reverse;
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .coaches {
+    margin-bottom: $spacing-9xl;
+    @media (max-width: 768px) {
+      margin-bottom: $spacing-3xl;
+      padding-left: $spacing-6xl;
+      padding-right: $spacing-6xl;
+    }
+    h3 {
+      margin-bottom: $spacing-5xl;
+      @media (max-width: 768px) {
+        margin-bottom: $spacing-2xl;
+      }
+    }
+  }
+  .coach-info-card-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-bottom: $spacing-2xl;
+  }
+  .coach-profile-desktop,
+  .coach-profile-mobile {
+    .coach-name {
+      margin-bottom: $spacing-s;
+      @media (max-width: 768px) {
+        margin-bottom: $spacing-xs;
+      }
+    }
+    .coach-experience {
+      list-style-position: inside;
+      padding-left: $spacing-m;
+      a {
+        color: $neutral-700;
+      }
+    }
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .coach-info-card {
+    cursor: pointer;
+    display: block;
+
+    &:focus-within {
+      background-color: $primary-blue-100;
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  .coach-profile-desktop .coach-data {
+    display: none;
+  }
+
+  // 根據選中狀態顯示對應教練資料
+  #coach-weijie:checked ~ .coaches .coach-profile-desktop #data-weijie,
+  #coach-yinmin:checked ~ .coaches .coach-profile-desktop #data-yinmin,
+  #coach-justin:checked ~ .coaches .coach-profile-desktop #data-justin,
+  #coach-casper:checked ~ .coaches .coach-profile-desktop #data-casper {
+    display: block;
+  }
+
+  .default-message {
+    text-align: center;
+    color: #999;
+    padding: $spacing-9xl $spacing-l;
+    font-size: 18px;
+  }
+
+  input[type="radio"]:checked
+    ~ .coaches
+    .coach-profile-desktop
+    .default-message {
+    display: none;
+  }
+
+  .mobile-slider {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .coach-info-card-list,
+    .coach-profile-desktop {
+      display: none;
+    }
+
+    .mobile-slider {
+      display: flex;
+      align-items: flex-start;
+      gap: $spacing-2xl;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      list-style: none;
+      padding-top: $spacing-xl;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .coach-info-card-wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+      .coach-info-card {
+        flex-shrink: 0;
+        width: calc(100vw - 98px);
+        max-width: none;
+        scroll-snap-align: start;
+        margin-bottom: $spacing-2xl;
+      }
+      .coach-experience {
+        list-style-type: disc;
+        list-style-position: inside;
+        max-height: 300px;
+        overflow-y: scroll;
+      }
+    }
+  }
+
+  .button-wrapper {
+    padding-top: $spacing-xl;
+    padding-bottom: $spacing-xl;
+    background-color: $primary-blue-100;
+    border: 2px solid $neutral-700;
+    border-radius: $radius-md;
+    transform: translateY($spacing-6xl);
+    &:hover {
+      .button-icon {
+        display: block;
+        opacity: 1;
+        transition: 0.5s;
+        margin-left: $spacing-l;
+      }
+    }
+    @media (max-width: 768px) {
+      margin-left: $spacing-6xl;
+      margin-right: $spacing-6xl;
+      transform: translateY($spacing-xl);
+    }
+  }
+  .button-go {
+    width: 100%;
+    color: $neutral-700;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button-icon {
+    opacity: 0;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}

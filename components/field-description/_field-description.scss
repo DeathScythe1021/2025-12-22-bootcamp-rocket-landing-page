@@ -1,0 +1,91 @@
+.field-description-container {
+    @include flex-center-col($spacing-4xl);
+
+    //以下RWD
+    @include tablet {
+        flex-direction: column;
+        gap: $spacing-5xl;
+    }
+}
+
+.field-description-box {
+    @include flex-center($spacing-5xl);
+    @include margin-auto;
+
+    &:nth-of-type(even) {
+        .field-description-text-area {
+            order: -1;
+        }
+    }
+
+    //以下RWD 這邊用tablet(max-width用768px就縮排) 不然768~428之間很擠 
+    @include tablet {
+        flex-direction: column;
+        gap: $spacing-m;
+
+        &:nth-of-type(even) {
+            .field-description-text-area {
+                order: 1;
+            }
+        }
+    }
+}
+
+.field-description-pic {
+    //figma上圖片與邊框是分離的，但提供的圖片自帶邊框效果，因此這裡不需要再額外加邊框
+    width: 526px;
+    height: 388px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    //以下RWD 這邊max-width用768px就縮排 
+    @include tablet {
+        aspect-ratio: 332 / 222;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.field-description-text-area {
+    @include flex-center-col ($spacing-l);
+    width: 494px;
+    height: auto;
+
+    //以下RWD
+    @include tablet {
+        width: 100%;
+        gap: 8px;
+    }
+}
+
+.field-description-text-title,
+.field-description-text-content {
+    width: auto;
+    align-self: start;
+}
+
+.pic-rest {
+    background-image: url('/assets/place-intro/intro-rest-lg-3x.png');
+
+    @include tablet {
+        background-image: url('/assets/place-intro/intro-rest-sm-3x.png ');
+    }
+}
+
+.pic-sofa {
+    background-image: url('/assets/place-intro/intro-discuss-lg-3x.png');
+
+    @include tablet {
+        background-image: url('/assets/place-intro/intro-discuss-sm-3x.png ');
+    }
+}
+
+.pic-entering {
+    background-image: url('/assets/place-intro/intro-workspace-lg-3x.png');
+
+    @include tablet {
+        //完全按照雲端檔名，並非拼錯字
+        background-image: url('/assets/place-intro/intro-worksapce-sm-3x.png ');
+    }
+}

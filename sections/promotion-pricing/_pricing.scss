@@ -1,0 +1,243 @@
+.pricing-section {
+  background: $primary-violet-200;
+  padding: $spacing-9xl $spacing-xl;
+}
+
+.pricing-head {
+  position: relative;
+  padding-top: 72px;
+}
+
+.promo-svg {
+  line-height: 150%;
+  vertical-align: text-top;
+  width: max-content;
+  max-width: none;  
+  position: absolute;
+  top: 0;
+  left: 40px;
+  min-height: 69px;
+  padding: 16px 16px;
+  margin: 0 0 24px;
+  background: url("/assets/promotion/promotion-lg.svg") no-repeat center / contain;
+  color: $neutral-700;
+  white-space: nowrap;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+}
+
+.strong{
+    font-weight:700;
+}
+
+.pricing-title {
+  margin: 0 0 $spacing-s;
+}
+
+.pricing-desc {
+  margin: 0 0 $spacing-5xl;
+  color: $neutral-700;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-xl;
+}
+
+.pricing-card {
+  background: $neutral-0;
+  border-radius: $radius-md;
+  border: 2px solid $neutral-700;
+  padding: $spacing-4xl $spacing-4xl $spacing-3xl;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card.light {
+  border-color: transparent;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06) inset;
+}
+
+.card-title {
+  text-align: center;
+  margin: 0 0 $spacing-xl;
+}
+
+.card-price {
+  background: $neutral-200;
+  border-radius: $radius-sm;
+  padding: $spacing-2xl $spacing-xl;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: $spacing-xs;
+  margin-bottom: $spacing-xl;
+}
+
+.amount {
+  font-family: $font-main;
+  font-weight: 700;
+  font-size: $fs-h4;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: $spacing-m;
+}
+
+.card-list li {
+  position: relative;
+  padding-left: 28px;
+  color: $neutral-700;
+}
+
+.card-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1.5px solid $neutral-700;
+  background: $neutral-0;
+}
+
+.card-list li::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 7px;
+  width: 10px;
+  height: 6px;
+  border-left: 2px solid $neutral-700;
+  border-bottom: 2px solid $neutral-700;
+  transform: rotate(-45deg);
+}
+
+.card-list .muted {
+  color: $neutral-600;
+}
+
+.card-list .muted::before,
+.card-list .muted::after {
+  opacity: 0.5;
+}
+
+.pricing-cta {
+  margin-top: $spacing-3xl;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $neutral-700;
+  border-radius: $radius-sm;
+  text-decoration: none;
+  color: $neutral-700;
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: $spacing-7xl $spacing-m;
+  }
+
+  .pricing-head {
+    padding-top: 60px;
+    margin-bottom: $spacing-xl;
+  }
+
+  .promo-svg {
+    line-height: 150%;
+    vertical-align: text-top;
+    width: max-content;
+    max-width: none;  
+    position: absolute;
+    top: -10px;
+    left: 70px;
+    min-height: 69px;
+    padding:16px 16px 12px 16px;
+    margin: 0 0 24px;
+    background-image: url("/assets/promotion/promotion-lg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: $neutral-700;
+    white-space: nowrap;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .pricing-desc {
+    margin-bottom: $spacing-xl;
+  }
+
+  .pricing-grid {
+    display: flex;
+    gap: $spacing-m;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding: 0 $spacing-m;
+    margin: 0;
+    scrollbar-width: none;
+  }
+
+  .pricing-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pricing-card {
+    flex: 0 0 calc(100vw - 32px);
+    scroll-snap-align: start;
+
+    padding: $spacing-m $spacing-s;
+    border-radius: $radius-sm;
+  }
+
+  .card-title {
+    margin-bottom: $spacing-m;
+  }
+
+  .card-price {
+    padding: $spacing-m $spacing-s;
+    margin-bottom: $spacing-m;
+  }
+
+  .amount {
+    font-size: $fs-m-h3;
+  }
+
+  .card-list {
+    gap: $spacing-s;
+  }
+
+  .card-list li {
+    padding-left: 22px;
+  }
+
+  .card-list li::before {
+    width: 14px;
+    height: 14px;
+    top: 2px;
+  }
+
+  .card-list li::after {
+    left: 3px;
+    top: 5px;
+    width: 8px;
+    height: 5px;
+  }
+
+  .pricing-cta {
+    margin-top: $spacing-xl;
+    height: 56px;
+  }
+}
