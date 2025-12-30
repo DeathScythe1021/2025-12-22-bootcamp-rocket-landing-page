@@ -2,6 +2,9 @@
     width: 100%;
     height: 64px;
     position: fixed;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9); // 設計稿為 $neutral-0，沒有設定透明度會看不到任何模糊效果
+    backdrop-filter: blur(8px);
 }
 
 .infinite-marquee{

@@ -1,13 +1,19 @@
 .about-training {
   font-family: $font-main;
   background-color: $neutral-100;
+
+  .container {
+    max-width: 1076px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   hgroup {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .new-batch {
-    width: fit-content;
     display: flex;
     align-items: center;
     padding: $spacing-s $spacing-l;
@@ -24,9 +30,58 @@
       border-right: 2px solid $neutral-200;
       white-space: nowrap;
     }
-    .new-batch-text-wrapper {
+    .new-batch-ticker {
       font-weight: 500;
       padding: 5px 0;
+      display: flex;
+      max-width: 507px;
+      overflow-x: hidden;
+    }
+    .new-batch-ticker-text {
+      white-space: nowrap;
+      span {
+        display: inline-block;
+      }
+    }
+    @media (max-width: 768px) {
+      font-size: $fs-m-body4;
+      
+      .new-batch-ticker {
+        max-width: 332px;
+      }
+      .new-batch-ticker {
+        max-width: 211px;
+      }
+      .new-batch-ticker-text {
+        span {
+          display: none;
+        }
+      }
+      @keyframes marquee-ticker-first {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(-150%);
+        }
+      }
+      @keyframes marquee-ticker-second {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-250%);
+        }
+      }
+      .new-batch-ticker-text:first-child {
+        animation: marquee-ticker-first 20s linear infinite;
+      }
+      .new-batch-ticker-text:nth-child(2) {
+        display: block;
+        animation: marquee-ticker-second 20s linear infinite;
+        animation-delay: 10s;
+        margin-left: 16px;
+      }
     }
   }
 
@@ -89,6 +144,14 @@
   .coach-info-card {
     cursor: pointer;
     display: block;
+
+    &:focus-within {
+      background-color: $primary-blue-100;
+    }
+
+    img {
+      cursor: pointer;
+    }
   }
 
   .coach-profile-desktop .coach-data {
@@ -110,7 +173,10 @@
     font-size: 18px;
   }
 
-  input[type="radio"]:checked ~ .coaches .coach-profile-desktop .default-message {
+  input[type="radio"]:checked
+    ~ .coaches
+    .coach-profile-desktop
+    .default-message {
     display: none;
   }
 
@@ -165,6 +231,7 @@
     background-color: $primary-blue-100;
     border: 2px solid $neutral-700;
     border-radius: $radius-md;
+    transform: translateY($spacing-6xl);
     &:hover {
       .button-icon {
         display: block;
@@ -172,6 +239,11 @@
         transition: 0.5s;
         margin-left: $spacing-l;
       }
+    }
+    @media (max-width: 768px) {
+      margin-left: $spacing-6xl;
+      margin-right: $spacing-6xl;
+      transform: translateY($spacing-xl);
     }
   }
   .button-go {

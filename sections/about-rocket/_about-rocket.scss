@@ -1,35 +1,48 @@
 .about-rocket {
   background-color: $primary-blue-100;
-  padding: 60px 72px;
   border-radius: $radius-ex-lg;
-  display: flex;
-  justify-content: space-between;
-  gap: $spacing-3xl;
-  .about-rocket-content {
-    flex: 1;
+
+  .container {
+    max-width: 1296px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .section-header {
-    .h2 {
-      font-size: $fs-h1;
-      margin-bottom: $spacing-5xl;
+
+  .about-rocket-info {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    gap: $spacing-3xl;
+    .about-rocket-content {
+      flex: 1;
     }
-    p {
-      margin-bottom: $spacing-xl;
-      font-size: $fs-body2;
-      font-weight: 400;
+    .section-header {
+      .section-title {
+        font-size: $fs-h1;
+        margin-bottom: $spacing-5xl;
+      }
+      p {
+        margin-bottom: $spacing-xl;
+        font-size: $fs-body2;
+        font-weight: 400;
+      }
     }
   }
 
   @media (max-width: 996px) {
-    padding: $spacing-4xl $spacing-6xl;
     border-radius: $radius-lg;
-    flex-direction: column;
-    gap: $spacing-xl;
+
+    .about-rocket-info {
+      padding: $spacing-4xl $spacing-6xl;
+      flex-direction: column;
+      gap: $spacing-xl;
+    }
     .section-eyebrow {
       font-size: $fs-m-body3;
     }
     .section-header {
-      .h2 {
+      .section-title {
         font-size: $fs-m-h1;
         margin-bottom: $spacing-m;
       }
@@ -62,7 +75,6 @@
 
   @media (max-width: 996px) {
     gap: $spacing-xl;
-    scroll-snap-type: none;
     height: 100%;
     .card-body {
       gap: 0px;

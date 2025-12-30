@@ -111,6 +111,7 @@ h4 {
 .body-3-fw-400 span {
   font-weight: 700;
   margin-bottom: 8px;
+  display: inline-block;
 }
 @media (max-width: 428px) {
   .body-3-fw-400 {
@@ -170,16 +171,14 @@ body {
 }
 
 .rocket-banner {
-  margin-top: 64px;
   background-image: url(../assets/banner/banner-bg.png);
   min-height: 757px;
   width: 100%;
   display: flex;
   position: relative;
   align-items: center;
-  justify-content: center;
-  gap: 64px;
-  padding: 127px 70px 182px;
+  justify-content: space-between;
+  padding: 92px 0 122px;
 }
 
 .rocket-card-wrap,
@@ -194,9 +193,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 24px;
+  padding: 0;
   background: #FFFFFF;
-  border: 1px solid #F0F0F0;
+  border: 2px solid #F0F0F0;
   border-radius: 24px;
   box-shadow: none;
   position: relative;
@@ -310,14 +309,13 @@ body {
   display: block;
   text-decoration: none;
   color: inherit;
-  max-width: 332px;
 }
 
-@media (max-width: 428px) {
+@media (max-width: 1023px) {
   .rocket-banner {
     flex-direction: column;
     gap: 48px;
-    padding: 40px 16px 80px;
+    padding: 124px 48px 88px;
     min-height: 0;
     overflow: visible;
   }
@@ -542,6 +540,10 @@ body {
   width: 100%;
   height: 64px;
   position: fixed;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
 }
 
 .infinite-marquee {
@@ -601,7 +603,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-.about-card .card-text-wrapper .card-title {
+.about-card .card-text-wrapper h3 {
   margin-bottom: 12px;
 }
 .about-card .badge-group {
@@ -640,7 +642,7 @@ body {
   margin-left: -51px;
   height: 160px;
 }
-@media (max-width: 428px) {
+@media (max-width: 576px) {
   .about-card {
     padding: 16px 20px;
     flex-direction: column;
@@ -651,12 +653,15 @@ body {
     display: flex;
     flex-direction: column;
   }
-  .about-card .card-text-wrapper .card-title {
+  .about-card .card-body .card-text-wrapper h3 {
     margin-bottom: 8px;
   }
   .about-card .badge-group {
     gap: 8px;
     margin-bottom: 12px;
+  }
+  .about-card .badge-group .badge-outline {
+    font-size: 12px;
   }
   .about-card .img-wrapper {
     justify-content: center;
@@ -895,324 +900,18 @@ body {
   }
 }
 
-.rocket-banner {
-  margin-top: 64px;
-  background-image: url(../assets/banner/banner-bg.png);
-  min-height: 757px;
-  width: 100%;
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  gap: 64px;
-  padding: 127px 70px 182px;
-}
-
-.rocket-card-wrap,
-.coworking-card-wrap {
-  position: relative;
-}
-
-.rocket-card,
-.coworking-card {
-  width: 440px;
-  height: 448px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 24px;
-  background: #FFFFFF;
-  border: 1px solid #F0F0F0;
-  border-radius: 24px;
-  box-shadow: none;
-  position: relative;
-}
-
-.rocket-card-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: -40px;
-}
-
-.rocket-card-title {
-  margin: 0;
-  font-size: 48px;
-  font-weight: 700;
-  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
-  text-align: center;
-}
-
-.rocket-card-subtitle {
-  margin: 4px 0 16px;
-  font-size: 24px;
-  color: #9A9A9A;
-  text-align: center;
-  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
-}
-
-.rocket-card-logo {
-  width: 124px;
-  height: 124px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  margin-bottom: 24px;
-}
-
-.rocket-card-logo img {
-  width: 100px;
-  height: 100px;
-  display: block;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.rocket-card-content {
-  margin: 0;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 175%;
-  text-align: center;
-  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
-}
-
-.rocket-divider {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1;
-  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
-}
-
-.rocket-badge,
-.coworking-badge {
-  position: absolute;
-  left: 50%;
-  bottom: -50px;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #FFFFFF;
-}
-
-.rocket-badge::before,
-.coworking-badge::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  pointer-events: none;
-  clip-path: inset(50% 0 0 0);
-  transform: translateY(10px);
-}
-
-.rocket-badge::before {
-  background: #BFC9F0;
-}
-
-.coworking-badge::before {
-  background: #EEE5FF;
-}
-
-.rocket-badge-icon,
-.coworking-badge-icon {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-}
-
-.rocket-badge-mb,
-.coworking-badge-mb {
-  display: none;
-}
-
-.rocket-card-link,
-.coworking-card-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  max-width: 332px;
-}
-
-@media (max-width: 428px) {
-  .rocket-banner {
-    flex-direction: column;
-    gap: 48px;
-    padding: 40px 16px 80px;
-    min-height: 0;
-    overflow: visible;
-  }
-  .rocket-divider {
-    display: none;
-  }
-  .rocket-card-content {
-    display: none;
-  }
-  .rocket-badge,
-  .coworking-badge {
-    display: none;
-  }
-  .rocket-card-max {
-    width: 100%;
-    max-width: 294px;
-    margin: 0;
-    align-items: center;
-    display: visible;
-  }
-  .rocket-card-wrap,
-  .coworking-card-wrap {
-    width: 100%;
-    max-width: 332px;
-    margin: 0 48px;
-    position: relative;
-    padding: 0 12px;
-  }
-  .rocket-card {
-    width: 100%;
-    height: 132px;
-    padding: 24px;
-    border-radius: 16px;
-    border: 2px solid #E0E0E0;
-    background: #FFFFFF;
-    box-shadow: none;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-  }
-  .coworking-card {
-    width: 100%;
-    height: 132px;
-    padding: 24px;
-    border-radius: 16px;
-    border: 2px solid #E0E0E0;
-    background: #FFFFFF;
-    box-shadow: none;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-  }
-  .rocket-card-header {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .rocket-card-title {
-    margin: 0;
-    font-size: 32px;
-    text-align: left;
-    position: relative;
-    padding-left: 56px;
-    display: inline-flex;
-    align-items: center;
-  }
-  .rocket-card-subtitle {
-    margin: 4px 0 0;
-    font-size: 20px;
-    line-height: 1.2;
-    text-align: left;
-    color: #9A9A9A;
-  }
-  .rocket-card-logo {
-    position: absolute;
-    left: 24px;
-    top: 36%;
-    transform: translateY(-50%);
-    width: 48px;
-    height: 48px;
-    margin: 0;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-  }
-  .rocket-card-logo img {
-    width: 48px;
-    height: 48px;
-    display: block;
-  }
-  .rocket-badge-mb {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translate(70%, -50%);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #FFFFFF;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    overflow: visible;
-  }
-  .coworking-badge-mb {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translate(70%, -50%);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #FFFFFF;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    overflow: visible;
-  }
-  .rocket-badge-mb-bg {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    transform: translate(0, -50%);
-    z-index: -1;
-    pointer-events: none;
-    clip-path: inset(0 0 0 49%);
-    background: #BFC9F0;
-  }
-  .coworking-badge-mb-bg {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    transform: translate(0, -50%);
-    z-index: -1;
-    pointer-events: none;
-    clip-path: inset(0 0 0 49%);
-    background: #EEE5FF;
-  }
-  .rocket-badge-icon-mb,
-  .coworking-badge-icon-mb {
-    display: block;
-    width: 60px;
-    height: 60px;
-    transform: translateX(6px);
-  }
-  .rocket-badge-icon,
-  .coworking-badge-icon {
-    display: none;
-  }
-}
 .successful-case-container {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  height: 694px;
-  padding: 92px 48px;
+  padding: 92px 72px 120px;
+}
+@media (max-width: 1439px) {
+  .successful-case-container {
+    padding: 48px 48px 92px;
+  }
 }
 
 .successful-case-box {
@@ -1225,6 +924,11 @@ body {
   max-width: 1296px;
   height: 510px;
   justify-content: space-between;
+}
+@media (max-width: 1439px) {
+  .successful-case-box {
+    height: 406px;
+  }
 }
 
 .successful-case-box-title {
@@ -1239,15 +943,15 @@ body {
   gap: 24px;
 }
 .successful-case-box-4pic img {
-  width: 306px;
-  flex: 0 0 306px;
-  height: auto;
+  width: 100%;
+  max-width: 306px;
+  aspect-ratio: 306/204;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1439px) {
   .successful-case-box-4pic img {
     width: 240px;
-    flex: 0 0 240px;
-    height: auto;
+    min-width: 240px;
+    aspect-ratio: 240/160;
   }
 }
 
@@ -1259,12 +963,11 @@ body {
   gap: 28px;
   width: 100%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1439px) {
   .successful-case-box-scroll {
     overflow-x: auto;
     overflow-y: hidden;
     gap: 24px;
-    align-items: flex-start;
   }
   .successful-case-box-scroll::-webkit-scrollbar {
     height: 8px;
@@ -1275,6 +978,11 @@ body {
   .successful-case-box-scroll::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 4px;
+  }
+}
+@media (max-width: 1024px) {
+  .successful-case-box-scroll {
+    align-items: flex-start;
   }
 }
 
@@ -1498,7 +1206,7 @@ body {
 
 @media (max-width: 768px) {
   .component-footer {
-    margin: 0;
+    margin: 20px 0 20px;
     color: #363636;
   }
   .footer {
@@ -1513,35 +1221,45 @@ body {
 }
 .about-rocket {
   background-color: #E5EBFF;
-  padding: 60px 72px;
   border-radius: 40px;
+}
+.about-rocket .container {
+  max-width: 1296px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-rocket .about-rocket-info {
+  padding-top: 60px;
+  padding-bottom: 60px;
   display: flex;
   justify-content: space-between;
   gap: 32px;
 }
-.about-rocket .about-rocket-content {
+.about-rocket .about-rocket-info .about-rocket-content {
   flex: 1;
 }
-.about-rocket .section-header .h2 {
+.about-rocket .about-rocket-info .section-header .section-title {
   font-size: 48px;
   margin-bottom: 40px;
 }
-.about-rocket .section-header p {
+.about-rocket .about-rocket-info .section-header p {
   margin-bottom: 24px;
   font-size: 20px;
   font-weight: 400;
 }
 @media (max-width: 996px) {
   .about-rocket {
-    padding: 36px 48px;
     border-radius: 24px;
+  }
+  .about-rocket .about-rocket-info {
+    padding: 36px 48px;
     flex-direction: column;
     gap: 24px;
   }
   .about-rocket .section-eyebrow {
     font-size: 16px;
   }
-  .about-rocket .section-header .h2 {
+  .about-rocket .section-header .section-title {
     font-size: 32px;
     margin-bottom: 16px;
   }
@@ -1574,7 +1292,6 @@ body {
 @media (max-width: 996px) {
   .about-card-scroll-list {
     gap: 24px;
-    scroll-snap-type: none;
     height: 100%;
   }
   .about-card-scroll-list .card-body {
@@ -1655,87 +1372,6 @@ body {
   .service-card-component h4 {
     width: 53px;
     height: 30px;
-  }
-}
-
-.detail-card-list .detail-card {
-  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
-  color: #363636;
-  background-color: #FFFFFF;
-  background-image: url("../assets/training/training-bg.png");
-  border-radius: 16px;
-  border: 2px solid #F0F0F0;
-  padding: 0px 80px 40px 48px;
-  margin-top: 32px;
-  list-style: none;
-}
-.detail-card-list ul {
-  list-style: none;
-}
-.detail-card-list ol {
-  list-style-position: inside;
-}
-.detail-card-list .mark-style {
-  font-weight: 700;
-  background-image: linear-gradient(transparent 50%, #ffeea3 50%);
-}
-.detail-card-list .card-body {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  gap: 48px;
-}
-.detail-card-list .detail-card-title {
-  margin-top: -32px;
-  margin-bottom: 28px;
-  width: 100%;
-}
-.detail-card-list .detail-card-title h3 {
-  padding: 12px 40px;
-  border: 2px solid #363636;
-  border-radius: 12px;
-  box-shadow: 4px 4px 0 #363636;
-  background-color: #FFFFFF;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.detail-card-list .card-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-  min-width: 0;
-}
-.detail-card-list .card-content h4 {
-  width: -moz-fit-content;
-  width: fit-content;
-  padding-bottom: 1px;
-  border-bottom: 3px solid #363636;
-  margin-bottom: 16px;
-}
-.detail-card-list .img-wrapper {
-  align-self: center;
-  flex: 0 0 auto;
-}
-@media (max-width: 768px) {
-  .detail-card-list .detail-card {
-    border-radius: 0;
-    padding: 0px 48px 32px 48px;
-  }
-  .detail-card-list .card-body {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 28px;
-  }
-  .detail-card-list .detail-card-title {
-    order: 1;
-    margin-bottom: 24px;
-  }
-  .detail-card-list .img-wrapper {
-    order: 2;
-  }
-  .detail-card-list .card-content-wrapper {
-    order: 3;
   }
 }
 
@@ -1845,14 +1481,17 @@ body {
   font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
   background-color: #F8F9FD;
 }
+.about-training .container {
+  max-width: 1076px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .about-training hgroup {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .about-training .new-batch {
-  width: -moz-fit-content;
-  width: fit-content;
   display: flex;
   align-items: center;
   padding: 12px 20px;
@@ -1871,9 +1510,57 @@ body {
   border-right: 2px solid #F0F0F0;
   white-space: nowrap;
 }
-.about-training .new-batch .new-batch-text-wrapper {
+.about-training .new-batch .new-batch-ticker {
   font-weight: 500;
   padding: 5px 0;
+  display: flex;
+  max-width: 507px;
+  overflow-x: hidden;
+}
+.about-training .new-batch .new-batch-ticker-text {
+  white-space: nowrap;
+}
+.about-training .new-batch .new-batch-ticker-text span {
+  display: inline-block;
+}
+@media (max-width: 768px) {
+  .about-training .new-batch {
+    font-size: 14px;
+  }
+  .about-training .new-batch .new-batch-ticker {
+    max-width: 332px;
+  }
+  .about-training .new-batch .new-batch-ticker {
+    max-width: 211px;
+  }
+  .about-training .new-batch .new-batch-ticker-text span {
+    display: none;
+  }
+  @keyframes marquee-ticker-first {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-150%);
+    }
+  }
+  @keyframes marquee-ticker-second {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-250%);
+    }
+  }
+  .about-training .new-batch .new-batch-ticker-text:first-child {
+    animation: marquee-ticker-first 20s linear infinite;
+  }
+  .about-training .new-batch .new-batch-ticker-text:nth-child(2) {
+    display: block;
+    animation: marquee-ticker-second 20s linear infinite;
+    animation-delay: 10s;
+    margin-left: 16px;
+  }
 }
 .about-training .detail-card-list {
   display: flex;
@@ -1939,6 +1626,12 @@ body {
   cursor: pointer;
   display: block;
 }
+.about-training .coach-info-card:focus-within {
+  background-color: #E5EBFF;
+}
+.about-training .coach-info-card img {
+  cursor: pointer;
+}
 .about-training .coach-profile-desktop .coach-data {
   display: none;
 }
@@ -2003,12 +1696,20 @@ body {
   background-color: #E5EBFF;
   border: 2px solid #363636;
   border-radius: 16px;
+  transform: translateY(48px);
 }
 .about-training .button-wrapper:hover .button-icon {
   display: block;
   opacity: 1;
   transition: 0.5s;
   margin-left: 20px;
+}
+@media (max-width: 768px) {
+  .about-training .button-wrapper {
+    margin-left: 48px;
+    margin-right: 48px;
+    transform: translateY(24px);
+  }
 }
 .about-training .button-go {
   width: 100%;
@@ -2258,189 +1959,21 @@ body {
     height: 56px;
   }
 }
-.about-training {
-  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
-  background-color: #F8F9FD;
+.index main .rocket-banner {
+  margin-top: 0;
+  position: relative;
+  z-index: 1;
 }
-.about-training hgroup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.index main .about-rocket {
+  margin-top: -12px;
+  position: relative;
+  z-index: 2;
 }
-.about-training .new-batch {
-  width: -moz-fit-content;
-  width: fit-content;
-  display: flex;
-  align-items: center;
-  padding: 12px 20px;
-  border-radius: 50px;
-  background-color: #FFFFFF;
-  box-shadow: 0 2px 4px #e8e8e8;
-  margin-top: 12px;
-  margin-bottom: 48px;
+.index main .about-training hgroup h2 {
+  margin-top: -28px;
 }
-.about-training .new-batch .new-batch-title {
-  font-weight: 700;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 5px 12px 5px 0;
-  margin-right: 12px;
-  border-right: 2px solid #F0F0F0;
-  white-space: nowrap;
-}
-.about-training .new-batch .new-batch-text-wrapper {
-  font-weight: 500;
-  padding: 5px 0;
-}
-.about-training .detail-card-list {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  margin-bottom: 64px;
-}
-.about-training .detail-card:nth-child(even) .card-body {
-  flex-direction: row-reverse;
-}
-@media (max-width: 768px) {
-  .about-training .detail-card:nth-child(even) .card-body {
-    flex-direction: column;
-  }
-}
-.about-training .coaches {
-  margin-bottom: 80px;
-}
-@media (max-width: 768px) {
-  .about-training .coaches {
-    margin-bottom: 32px;
-    padding-left: 48px;
-    padding-right: 48px;
-  }
-}
-.about-training .coaches h3 {
-  margin-bottom: 40px;
-}
-@media (max-width: 768px) {
-  .about-training .coaches h3 {
-    margin-bottom: 28px;
-  }
-}
-.about-training .coach-info-card-list {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  margin-bottom: 28px;
-}
-.about-training .coach-profile-desktop .coach-name,
-.about-training .coach-profile-mobile .coach-name {
-  margin-bottom: 12px;
-}
-@media (max-width: 768px) {
-  .about-training .coach-profile-desktop .coach-name,
-  .about-training .coach-profile-mobile .coach-name {
-    margin-bottom: 8px;
-  }
-}
-.about-training .coach-profile-desktop .coach-experience,
-.about-training .coach-profile-mobile .coach-experience {
-  list-style-position: inside;
-  padding-left: 16px;
-}
-.about-training .coach-profile-desktop .coach-experience a,
-.about-training .coach-profile-mobile .coach-experience a {
-  color: #363636;
-}
-.about-training input[type=radio] {
-  display: none;
-}
-.about-training .coach-info-card {
-  cursor: pointer;
-  display: block;
-}
-.about-training .coach-profile-desktop .coach-data {
-  display: none;
-}
-.about-training #coach-weijie:checked ~ .coaches .coach-profile-desktop #data-weijie,
-.about-training #coach-yinmin:checked ~ .coaches .coach-profile-desktop #data-yinmin,
-.about-training #coach-justin:checked ~ .coaches .coach-profile-desktop #data-justin,
-.about-training #coach-casper:checked ~ .coaches .coach-profile-desktop #data-casper {
-  display: block;
-}
-.about-training .default-message {
-  text-align: center;
-  color: #999;
-  padding: 80px 20px;
-  font-size: 18px;
-}
-.about-training input[type=radio]:checked ~ .coaches .coach-profile-desktop .default-message {
-  display: none;
-}
-.about-training .mobile-slider {
-  display: none;
-}
-@media (max-width: 768px) {
-  .about-training .coach-info-card-list,
-  .about-training .coach-profile-desktop {
-    display: none;
-  }
-  .about-training .mobile-slider {
-    display: flex;
-    align-items: flex-start;
-    gap: 28px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    list-style: none;
-    padding-top: 24px;
-  }
-  .about-training .mobile-slider::-webkit-scrollbar {
-    display: none;
-  }
-  .about-training .mobile-slider .coach-info-card-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-  .about-training .mobile-slider .coach-info-card {
-    flex-shrink: 0;
-    width: calc(100vw - 98px);
-    max-width: none;
-    scroll-snap-align: start;
-    margin-bottom: 28px;
-  }
-  .about-training .mobile-slider .coach-experience {
-    list-style-type: disc;
-    list-style-position: inside;
-    max-height: 300px;
-    overflow-y: scroll;
-  }
-}
-.about-training .button-wrapper {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  background-color: #E5EBFF;
-  border: 2px solid #363636;
-  border-radius: 16px;
-}
-.about-training .button-wrapper:hover .button-icon {
-  display: block;
-  opacity: 1;
-  transition: 0.5s;
-  margin-left: 20px;
-}
-.about-training .button-go {
-  width: 100%;
-  color: #363636;
-  text-decoration: none;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.about-training .button-icon {
-  opacity: 0;
-}
-@media (max-width: 768px) {
-  .about-training .button-icon {
-    display: none;
+@media (max-width: 428px) {
+  .index main .training-box {
+    padding-bottom: 76px;
   }
 }/*# sourceMappingURL=main.css.map */

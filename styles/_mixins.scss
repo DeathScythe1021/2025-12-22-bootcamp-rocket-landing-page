@@ -66,6 +66,12 @@
     }
 }
 
+@mixin large-notebook {
+    @media (max-width: 1439px) {
+        @content;
+    }
+}
+
 // 圓角系統
 @mixin box-outline($radius-size: md, $border-width: 2px, $border-color: $neutral) {
     // 1. 邊框邏輯
