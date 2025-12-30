@@ -604,7 +604,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-.about-card .card-text-wrapper .card-title {
+.about-card .card-text-wrapper h3 {
   margin-bottom: 12px;
 }
 .about-card .badge-group {
@@ -654,7 +654,7 @@ body {
     display: flex;
     flex-direction: column;
   }
-  .about-card .card-text-wrapper .card-title {
+  .about-card .card-body .card-text-wrapper h3 {
     margin-bottom: 8px;
   }
   .about-card .badge-group {
@@ -1731,25 +1731,6 @@ body {
   }
 }
 
-.index main .rocket-banner {
-  margin-top: 0;
-  position: relative;
-  z-index: 1;
-}
-.index main .about-rocket {
-  margin-top: -12px;
-  position: relative;
-  z-index: 2;
-}
-.index main .about-training hgroup h2 {
-  margin-top: -28px;
-}
-@media (max-width: 428px) {
-  .index main .training-box {
-    padding-bottom: 76px;
-  }
-}
-
 .pricing-section {
   background: #EEE5FF;
   padding: 80px 24px;
@@ -1978,5 +1959,23 @@ body {
   .pricing-cta {
     margin-top: 24px;
     height: 56px;
+  }
+}
+.index main .rocket-banner {
+  margin-top: 0;
+  position: relative;
+  z-index: 1;
+}
+.index main .about-rocket {
+  margin-top: -12px;
+  position: relative;
+  z-index: 2;
+}
+.index main .about-training hgroup h2 {
+  margin-top: -28px;
+}
+@media (max-width: 428px) {
+  .index main .training-box {
+    padding-bottom: 76px;
   }
 }/*# sourceMappingURL=main.css.map */
