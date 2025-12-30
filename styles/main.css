@@ -2183,7 +2183,7 @@ body {
 
 @media (max-width: 768px) {
   .pricing-section {
-    padding: 56px 16px;
+    padding: 56px 48px;
   }
   .pricing-head {
     padding-top: 60px;
@@ -2209,7 +2209,7 @@ body {
     display: none;
   }
   .pricing-card {
-    flex: 0 0 calc(100vw - 32px);
+    flex: 0 0 calc(100vw - 96px);
     scroll-snap-align: start;
     padding: 16px 12px;
     border-radius: 12px;

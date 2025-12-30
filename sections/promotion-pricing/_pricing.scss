@@ -161,7 +161,7 @@
 
 @media (max-width: 768px) {
   .pricing-section {
-    padding: $spacing-7xl $spacing-m;
+    padding: $spacing-7xl $spacing-6xl; //
   }
 
   .pricing-head {
@@ -192,7 +192,7 @@
   }
 
   .pricing-card {
-    flex: 0 0 calc(100vw - 32px);
+    flex: 0 0 calc(100vw - 96px);
     scroll-snap-align: start;
     padding: $spacing-m $spacing-s;
     border-radius: $radius-sm;
