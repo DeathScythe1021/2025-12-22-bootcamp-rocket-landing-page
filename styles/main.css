@@ -698,6 +698,11 @@ body {
 .field-description-box:nth-of-type(even) .field-description-text-area {
   order: -1;
 }
+@media (max-width: 1439px) {
+  .field-description-box {
+    gap: 4px;
+  }
+}
 @media (max-width: 1024px) {
   .field-description-box {
     flex-direction: column;
@@ -2039,28 +2044,73 @@ body {
   padding-top: 72px;
 }
 
-.promo-svg {
-  line-height: 150%;
-  vertical-align: text-top;
-  width: -moz-max-content;
-  width: max-content;
-  max-width: none;
+.promo-bubble-text {
+  display: inline-block;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.promo-bubble-wrap {
   position: absolute;
-  top: 0;
-  left: 40px;
-  min-height: 69px;
+  top: -15px;
+  left: 60px;
+}
+
+.promo-bubble {
+  --tail-left: 40px;
+  --tail-bottom: -14px;
+  --tail-size: 15px;
+  --border-w: 2px;
+  --white-up: 18px;
+  --white-x: 0px;
+  --white-y: 0px;
+  position: relative;
+  transform: none;
+  display: inline-flex;
+  align-items: center;
   padding: 20px 16px;
-  margin: 0 0 24px;
-  background: url("/assets/promotion/promotion-lg.svg") no-repeat center/contain;
+  min-height: 56px;
+  background: #FFFFFF;
+  border: 2px solid #363636;
+  border-radius: 12px;
   color: #363636;
   white-space: nowrap;
   box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
+  margin: 0;
+  overflow: visible;
+}
+
+.promo-bubble-tail {
+  position: absolute;
+  left: calc(var(--tail-left) - var(--tail-size));
+  bottom: var(--tail-bottom);
+  width: 0;
+  height: 0;
+  border-left: var(--tail-size) solid transparent;
+  border-right: var(--tail-size) solid transparent;
+  border-top: var(--tail-size) solid #363636;
+  pointer-events: none;
+  overflow: visible;
+  position: absolute;
+}
+
+.promo-bubble-tail-inner {
+  position: absolute;
+  left: 50%;
+  top: calc(var(--border-w) - var(--white-up));
+  width: 0;
+  height: 0;
+  --inner: calc(var(--tail-size) - var(--border-w));
+  border-left: var(--inner) solid transparent;
+  border-right: var(--inner) solid transparent;
+  border-top: var(--inner) solid #FFFFFF;
+  transform: translateX(-50%);
+  pointer-events: none;
 }
 
 .strong {
   font-weight: 700;
+  display: inline-flex;
 }
 
 .pricing-title {
@@ -2189,15 +2239,27 @@ body {
     padding-top: 60px;
     margin-bottom: 24px;
   }
-  .promo-svg {
-    max-width: 331px;
+  .promo-bubble {
+    --tail-left: 25px;
+    --tail-bottom: -14px;
+    --tail-size: 14px;
     width: 100%;
-    top: -10px;
-    left: 0px;
-    background-image: url("/assets/promotion/promotion-lg.svg");
-    display: flex;
-    flex-wrap: wrap;
+    max-width: 386px;
     white-space: normal;
+    min-height: 69px;
+    margin: 0 0 16px;
+    white-space: normal;
+    display: block;
+  }
+  .promo-bubble-text {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .promo-bubble-wrap {
+    position: static;
+    top: auto;
+    left: auto;
   }
   .pricing-grid {
     display: flex;
