@@ -5,8 +5,13 @@
   display: flex;
   position: relative;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 92px 0 122px;
+  gap: $spacing-8xl;
+
+  @include large-notebook {
+    gap: $spacing-4xl;
+  }
 }
 
 .rocket-card-wrap,

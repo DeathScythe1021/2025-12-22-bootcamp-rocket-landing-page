@@ -13,6 +13,7 @@
     flex-direction: column;
     align-items: center;
   }
+
   .new-batch {
     display: flex;
     align-items: center;
@@ -22,6 +23,7 @@
     box-shadow: 0 2px 4px #e8e8e8;
     margin-top: $spacing-s;
     margin-bottom: $spacing-6xl;
+
     .new-batch-title {
       font-weight: 700;
       width: fit-content;
@@ -30,6 +32,7 @@
       border-right: 2px solid $neutral-200;
       white-space: nowrap;
     }
+
     .new-batch-ticker {
       font-weight: 500;
       padding: 5px 0;
@@ -37,45 +40,56 @@
       max-width: 507px;
       overflow-x: hidden;
     }
+
     .new-batch-ticker-text {
       white-space: nowrap;
+
       span {
         display: inline-block;
       }
     }
+
     @media (max-width: 768px) {
       font-size: $fs-m-body4;
-      
+
       .new-batch-ticker {
         max-width: 332px;
       }
+
       .new-batch-ticker {
         max-width: 211px;
       }
+
       .new-batch-ticker-text {
         span {
           display: none;
         }
       }
+
       @keyframes marquee-ticker-first {
         from {
           transform: translateX(100%);
         }
+
         to {
           transform: translateX(-150%);
         }
       }
+
       @keyframes marquee-ticker-second {
         from {
           transform: translateX(0%);
         }
+
         to {
           transform: translateX(-250%);
         }
       }
+
       .new-batch-ticker-text:first-child {
         animation: marquee-ticker-first 20s linear infinite;
       }
+
       .new-batch-ticker-text:nth-child(2) {
         display: block;
         animation: marquee-ticker-second 20s linear infinite;
@@ -91,9 +105,11 @@
     gap: $spacing-6xl;
     margin-bottom: $spacing-8xl;
   }
+
   .detail-card:nth-child(even) {
     .card-body {
       flex-direction: row-reverse;
+
       @media (max-width: 768px) {
         flex-direction: column;
       }
@@ -102,35 +118,43 @@
 
   .coaches {
     margin-bottom: $spacing-9xl;
+
     @media (max-width: 768px) {
       margin-bottom: $spacing-3xl;
       padding-left: $spacing-6xl;
       padding-right: $spacing-6xl;
     }
+
     h3 {
       margin-bottom: $spacing-5xl;
+
       @media (max-width: 768px) {
         margin-bottom: $spacing-2xl;
       }
     }
   }
+
   .coach-info-card-list {
     display: flex;
     justify-content: space-between;
     list-style: none;
     margin-bottom: $spacing-2xl;
   }
+
   .coach-profile-desktop,
   .coach-profile-mobile {
     .coach-name {
       margin-bottom: $spacing-s;
+
       @media (max-width: 768px) {
         margin-bottom: $spacing-xs;
       }
     }
+
     .coach-experience {
       list-style-position: inside;
       padding-left: $spacing-m;
+
       a {
         color: $neutral-700;
       }
@@ -173,10 +197,7 @@
     font-size: 18px;
   }
 
-  input[type="radio"]:checked
-    ~ .coaches
-    .coach-profile-desktop
-    .default-message {
+  input[type="radio"]:checked ~ .coaches .coach-profile-desktop .default-message {
     display: none;
   }
 
@@ -185,6 +206,7 @@
   }
 
   @media (max-width: 768px) {
+
     .coach-info-card-list,
     .coach-profile-desktop {
       display: none;
@@ -209,6 +231,7 @@
         display: flex;
         flex-direction: column;
       }
+
       .coach-info-card {
         flex-shrink: 0;
         width: calc(100vw - 98px);
@@ -216,6 +239,7 @@
         scroll-snap-align: start;
         margin-bottom: $spacing-2xl;
       }
+
       .coach-experience {
         list-style-type: disc;
         list-style-position: inside;
@@ -226,12 +250,15 @@
   }
 
   .button-wrapper {
-    padding-top: $spacing-xl;
-    padding-bottom: $spacing-xl;
     background-color: $primary-blue-100;
     border: 2px solid $neutral-700;
     border-radius: $radius-md;
     transform: translateY($spacing-6xl);
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     &:hover {
       .button-icon {
         display: block;
@@ -240,12 +267,21 @@
         margin-left: $spacing-l;
       }
     }
+
     @media (max-width: 768px) {
+      height: 80px;
       margin-left: $spacing-6xl;
       margin-right: $spacing-6xl;
       transform: translateY($spacing-xl);
+
+      &:hover {
+        .button-icon {
+          display: none;
+        }
+      }
     }
   }
+
   .button-go {
     width: 100%;
     color: $neutral-700;
@@ -255,8 +291,11 @@
     justify-content: center;
     align-items: center;
   }
+
   .button-icon {
     opacity: 0;
+    line-height: inherit;
+
     @media (max-width: 768px) {
       display: none;
     }

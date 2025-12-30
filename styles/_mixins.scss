@@ -177,5 +177,6 @@
 
 //半橘底
 @mixin mark-style-orange {
+    line-height: normal;
     background-image: linear-gradient(transparent 50%, $accent-orange 50%);
 }

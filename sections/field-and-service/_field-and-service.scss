@@ -55,7 +55,6 @@
 .service-card-component h4 {
     width: 74px;
     height: 42px;
-    line-height: normal; //用line-height: normal才比較像設計稿，官方網站也這樣設定
     @include mark-style-orange;
 
     @include mobile {

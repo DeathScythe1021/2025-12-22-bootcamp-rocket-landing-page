@@ -1,20 +1,19 @@
-.location-section{
-    padding: $spacing-9xl 0;
-    display: flex;
-    justify-content: center;
+.location-section {
+  display: flex;
+  justify-content: center;
 }
 
 .location-card {
-    width: 1440px;
-    height: 540px;
-    background: $primary-violet-200;
-    border-radius: $radius-ex-lg;
-    padding: 60px 72px;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 636px 500px;
-    column-gap: 100px;
-    align-items: start;
+  width: 1440px;
+  height: 540px;
+  background: $primary-violet-200;
+  border-radius: $radius-ex-lg;
+  padding: 60px 72px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 636px 500px;
+  column-gap: 100px;
+  align-items: start;
 }
 
 .location-map {
@@ -23,11 +22,12 @@
   border-radius: $radius-md;
   overflow: hidden;
 }
+
 .location-map img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .location-info {
@@ -58,48 +58,46 @@
   font-family: $font-main;
   color: $neutral-700;
 }
+
 .location-desc strong {
-    font-weight: 700;
+  font-weight: 700;
 }
 
-@media (max-width: 428px) {
-  .location-section {
-    padding: $spacing-xl 0;
-  }
+@media (max-width: 1439px) {
 
   .location-card {
     width: calc(100% - 32px);
     height: auto;
-    padding: $spacing-m;
+    padding: $spacing-4xl;
     border-radius: $radius-md;
 
     display: flex;
     flex-direction: column;
     gap: $spacing-xl;
 
-  .location-info {
-    width: 100%;
-    order: 1;
-  }
+    .location-info {
+      width: 100%;
+      order: 1;
+    }
 
-  .location-eyebrow {
-    font-size: $fs-m-body4;
-    margin-bottom: $spacing-xs;
-  }
+    .location-eyebrow {
+      font-size: $fs-m-body4;
+      margin-bottom: $spacing-xs;
+    }
 
-  .location-title {
-    margin-bottom: $spacing-m;
-  }
+    .location-title {
+      margin-bottom: $spacing-m;
+    }
 
-  .location-desc {
-    font-size: $fs-m-body3;
-  }
+    .location-desc {
+      font-size: $fs-m-body3;
+    }
 
-  .location-map {
-    width: 100%;
-    height: 240px;
-    border-radius: $radius-md;
-    order: 2;
+    .location-map {
+      width: 100%;
+      height: 240px;
+      border-radius: $radius-md;
+      order: 2;
+    }
   }
-}
 }

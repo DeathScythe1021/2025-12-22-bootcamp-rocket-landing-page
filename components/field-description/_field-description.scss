@@ -2,7 +2,7 @@
     @include flex-center-col($spacing-4xl);
 
     //以下RWD
-    @include tablet {
+    @include notebook {
         flex-direction: column;
         gap: $spacing-5xl;
     }
@@ -18,10 +18,11 @@
         }
     }
 
-    //以下RWD 這邊用tablet(max-width用768px就縮排) 不然768~428之間很擠 
-    @include tablet {
+    //以下RWD 
+    @include notebook {
         flex-direction: column;
         gap: $spacing-m;
+        width: 100%;
 
         &:nth-of-type(even) {
             .field-description-text-area {
@@ -39,8 +40,8 @@
     background-size: contain;
     background-position: center;
 
-    //以下RWD 這邊max-width用768px就縮排 
-    @include tablet {
+    //以下RWD 
+    @include notebook {
         aspect-ratio: 332 / 222;
         width: 100%;
         height: auto;
@@ -53,7 +54,7 @@
     height: auto;
 
     //以下RWD
-    @include tablet {
+    @include notebook {
         width: 100%;
         gap: 8px;
     }
@@ -65,27 +66,28 @@
     align-self: start;
 }
 
+
 .pic-rest {
     background-image: url('/assets/place-intro/intro-rest-lg-3x.png');
 
-    @include tablet {
-        background-image: url('/assets/place-intro/intro-rest-sm-3x.png ');
+    @include notebook {
+        background-image: url('/assets/place-intro/intro-rest-sm-3x.png');
     }
 }
 
 .pic-sofa {
     background-image: url('/assets/place-intro/intro-discuss-lg-3x.png');
 
-    @include tablet {
-        background-image: url('/assets/place-intro/intro-discuss-sm-3x.png ');
+    @include notebook {
+        background-image: url('/assets/place-intro/intro-discuss-sm-3x.png');
     }
 }
 
 .pic-entering {
     background-image: url('/assets/place-intro/intro-workspace-lg-3x.png');
 
-    @include tablet {
+    @include notebook {
         //完全按照雲端檔名，並非拼錯字
-        background-image: url('/assets/place-intro/intro-worksapce-sm-3x.png ');
+        background-image: url('/assets/place-intro/intro-worksapce-sm-3x.png');
     }
 }
