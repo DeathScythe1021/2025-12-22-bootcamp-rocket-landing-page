@@ -1694,12 +1694,14 @@ body {
   }
 }
 .about-training .button-wrapper {
-  padding-top: 24px;
-  padding-bottom: 24px;
   background-color: #E5EBFF;
   border: 2px solid #363636;
   border-radius: 16px;
   transform: translateY(48px);
+  height: 96px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .about-training .button-wrapper:hover .button-icon {
   display: block;
@@ -1709,9 +1711,13 @@ body {
 }
 @media (max-width: 768px) {
   .about-training .button-wrapper {
+    height: 80px;
     margin-left: 48px;
     margin-right: 48px;
     transform: translateY(24px);
+  }
+  .about-training .button-wrapper:hover .button-icon {
+    display: none;
   }
 }
 .about-training .button-go {
@@ -1725,6 +1731,7 @@ body {
 }
 .about-training .button-icon {
   opacity: 0;
+  line-height: inherit;
 }
 @media (max-width: 768px) {
   .about-training .button-icon {
@@ -1751,6 +1758,7 @@ body {
   display: inline-block;
   line-height: 1.5;
   white-space: nowrap;
+  color: #363636;
 }
 
 .promo-bubble-wrap {
