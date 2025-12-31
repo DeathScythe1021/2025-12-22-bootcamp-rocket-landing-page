@@ -224,11 +224,11 @@
 
 @media (max-width: 768px) {
   .pricing-section {
-    padding: $spacing-7xl $spacing-6xl;
+    padding: $spacing-4xl $spacing-6xl $spacing-6xl;
   }
 
   .pricing-head {
-    padding-top: 60px;
+    padding-top: 0;
     margin-bottom: $spacing-xl;
   }
 

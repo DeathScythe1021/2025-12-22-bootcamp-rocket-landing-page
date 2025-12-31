@@ -760,7 +760,7 @@ body {
 }
 @media (max-width: 1024px) {
   .pic-rest {
-    background-image: url("/assets/place-intro/intro-rest-sm-3x.png ");
+    background-image: url("/assets/place-intro/intro-rest-sm-3x.png");
   }
 }
 
@@ -769,7 +769,7 @@ body {
 }
 @media (max-width: 1024px) {
   .pic-sofa {
-    background-image: url("/assets/place-intro/intro-discuss-sm-3x.png ");
+    background-image: url("/assets/place-intro/intro-discuss-sm-3x.png");
   }
 }
 
@@ -778,7 +778,7 @@ body {
 }
 @media (max-width: 1024px) {
   .pic-entering {
-    background-image: url("/assets/place-intro/intro-worksapce-sm-3x.png ");
+    background-image: url("/assets/place-intro/intro-worksapce-sm-3x.png");
   }
 }
 
@@ -1947,10 +1947,10 @@ body {
 
 @media (max-width: 768px) {
   .pricing-section {
-    padding: 56px 48px;
+    padding: 36px 48px 48px;
   }
   .pricing-head {
-    padding-top: 60px;
+    padding-top: 0;
     margin-bottom: 24px;
   }
   .promo-bubble-wrap {
