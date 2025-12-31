@@ -70,7 +70,7 @@
 .pic-rest {
     background-image: url('/assets/place-intro/intro-rest-lg-3x.png');
 
-    @include notebook {
+    @include tablet {
         background-image: url('/assets/place-intro/intro-rest-sm-3x.png');
     }
 }
@@ -78,7 +78,7 @@
 .pic-sofa {
     background-image: url('/assets/place-intro/intro-discuss-lg-3x.png');
 
-    @include notebook {
+    @include tablet {
         background-image: url('/assets/place-intro/intro-discuss-sm-3x.png');
     }
 }
